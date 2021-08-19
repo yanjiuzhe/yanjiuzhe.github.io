@@ -6,7 +6,7 @@
   <link href="https://yanjiuzhe.github.io/atom.xml" rel="self"/>
   
   <link href="https://yanjiuzhe.github.io/"/>
-  <updated>2021-08-19T07:54:25.340Z</updated>
+  <updated>2021-08-19T07:57:51.033Z</updated>
   <id>https://yanjiuzhe.github.io/</id>
   
   <author>
@@ -17,11 +17,151 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>计算机基础知识</title>
+    <link href="https://yanjiuzhe.github.io/posts/6bcf31ad.html"/>
+    <id>https://yanjiuzhe.github.io/posts/6bcf31ad.html</id>
+    <published>2021-08-19T07:57:51.000Z</published>
+    <updated>2021-08-19T07:57:51.033Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>python爬虫</title>
+    <link href="https://yanjiuzhe.github.io/posts/dbb714e3.html"/>
+    <id>https://yanjiuzhe.github.io/posts/dbb714e3.html</id>
+    <published>2021-08-19T07:57:38.000Z</published>
+    <updated>2021-08-19T07:57:38.024Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>python程序设计</title>
+    <link href="https://yanjiuzhe.github.io/posts/dd5b5f9c.html"/>
+    <id>https://yanjiuzhe.github.io/posts/dd5b5f9c.html</id>
+    <published>2021-08-19T07:57:26.000Z</published>
+    <updated>2021-08-19T07:57:26.844Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>pyMySQL</title>
+    <link href="https://yanjiuzhe.github.io/posts/594dd1f5.html"/>
+    <id>https://yanjiuzhe.github.io/posts/594dd1f5.html</id>
+    <published>2021-08-19T07:57:13.000Z</published>
+    <updated>2021-08-19T07:57:13.541Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JAVA程序设计</title>
+    <link href="https://yanjiuzhe.github.io/posts/2432baef.html"/>
+    <id>https://yanjiuzhe.github.io/posts/2432baef.html</id>
+    <published>2021-08-19T07:56:58.000Z</published>
+    <updated>2021-08-19T07:56:58.569Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript</title>
+    <link href="https://yanjiuzhe.github.io/posts/cc1b9611.html"/>
+    <id>https://yanjiuzhe.github.io/posts/cc1b9611.html</id>
+    <published>2021-08-19T07:56:46.000Z</published>
+    <updated>2021-08-19T07:56:46.264Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C语言程序设计</title>
+    <link href="https://yanjiuzhe.github.io/posts/ba003d1c.html"/>
+    <id>https://yanjiuzhe.github.io/posts/ba003d1c.html</id>
+    <published>2021-08-19T07:56:32.000Z</published>
+    <updated>2021-08-19T07:56:32.242Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>HTML5</title>
     <link href="https://yanjiuzhe.github.io/posts/98f3a6d9.html"/>
     <id>https://yanjiuzhe.github.io/posts/98f3a6d9.html</id>
     <published>2021-08-19T07:54:25.000Z</published>
-    <updated>2021-08-19T07:54:25.340Z</updated>
+    <updated>2021-08-19T07:54:58.029Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
     
@@ -41,7 +181,7 @@
     <link href="https://yanjiuzhe.github.io/posts/ee69e452.html"/>
     <id>https://yanjiuzhe.github.io/posts/ee69e452.html</id>
     <published>2021-08-19T07:52:02.000Z</published>
-    <updated>2021-08-19T07:52:02.536Z</updated>
+    <updated>2021-08-19T07:54:58.028Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
     
