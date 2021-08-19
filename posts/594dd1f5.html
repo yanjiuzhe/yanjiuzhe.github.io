@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="pyMySQL, 计算机 大数据 爬虫 WEB后端 数据分析">
+    <meta name="keywords" content="搜索关键字,数据库,pyMySQL">
     <meta name="description" content="IT | 计算机应用">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -616,12 +616,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                <span class="chip bg-color">数据库</span>
+                            </a>
+                        
+                            <a href="/tags/pyMySQL/">
+                                <span class="chip bg-color">pyMySQL</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                博客篇
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -639,14 +656,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -664,7 +681,283 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="pyMySQL"><a href="#pyMySQL" class="headerlink" title="pyMySQL"></a>pyMySQL</h1><h1 id="第一章、创建数据库和表"><a href="#第一章、创建数据库和表" class="headerlink" title="第一章、创建数据库和表"></a>第一章、创建数据库和表</h1><p>1、连接数据库</p>
+<pre class="line-numbers language-none"><code class="language-none">conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='zzn218', db='zzn', charset='utf8')
+
+# 输出&lt;pymysql.connections.Connection object at 0x000002A23020EFD0&gt;，说明连接成功。
+
+参数
+host	主机名
+port	端口
+user	用户名
+passwd	密码
+charset	编码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、创建游标，插入数据。要创建游标，通过游标对象就可对数据库进行增、删、查、改。</p>
+<pre class="line-numbers language-none"><code class="language-none">cur = conn.cursor()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>3、创建数据库</p>
+<pre class="line-numbers language-none"><code class="language-none">cur.execute("create database zzn character set utf8;") 
+
+参数：
+1）创建数据库，指定数据库名
+create database zzn
+
+2）指定编码
+character set utf8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4、使用数据库</p>
+<pre class="line-numbers language-none"><code class="language-none">cur.execute("use zzn;") <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>5、创建表</p>
+<pre class="line-numbers language-none"><code class="language-none">cur.execute("create table blogs(id char(20), name char(20),) character set utf8;") 
+
+参数
+1）创建表
+create table 表名(字段名 字段类型，字段名 字段类型)
+create table 表名(id char(20), name char(20),)
+
+2）指定编码
+character set utf8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h1 id="第二章、增加数据"><a href="#第二章、增加数据" class="headerlink" title="第二章、增加数据"></a>第二章、增加数据</h1><p>1、导入pymysql库</p>
+<pre class="line-numbers language-none"><code class="language-none">import pymysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>2、创建数据库连接</p>
+<pre class="line-numbers language-none"><code class="language-none">conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='zzn218', db='zzn', charset='utf8')
+print(conn)
+# 输出&lt;pymysql.connections.Connection object at 0x000002A23020EFD0&gt;，说明连接成功。
+
+参数
+host	主机名
+port	端口
+user	用户名
+passwd	密码
+db		数据库名
+charset	编码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3、创建游标，插入数据，要创建游标,通过游标对象就可对数据库进行增、删、查、改</p>
+<pre class="line-numbers language-none"><code class="language-none">cur = conn.cursor()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>4、sql语句：对数据库进行增、删、查、改</p>
+<pre class="line-numbers language-none"><code class="language-none">插入
+sql = "insert into stu(name, id) values ('张三','20209020201')"
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>4、执行sql语句</p>
+<pre class="line-numbers language-none"><code class="language-none">cur.execute(sql)
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>5、向数据库中提交数据</p>
+<pre class="line-numbers language-none"><code class="language-none">conn.commit()
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>6、关闭数据库连接（释放资源）</p>
+<pre class="line-numbers language-none"><code class="language-none">conn.close()
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+
+
+<h1 id="第三章、删除数据"><a href="#第三章、删除数据" class="headerlink" title="第三章、删除数据"></a>第三章、删除数据</h1><p>1、导入pymysql库</p>
+<pre class="line-numbers language-none"><code class="language-none">import pymysql
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>2、创建数据库连接</p>
+<pre class="line-numbers language-none"><code class="language-none">conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='zzn218', db='zzn', charset='utf8')print(conn)
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>3、创建游标，插入数据，要创建游标,通过游标对象就可对数据库进行增、删、查、改</p>
+<pre class="line-numbers language-none"><code class="language-none">cur = conn.cursor()
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>4、sql语句：对数据库进行增、删、查、改</p>
+<pre class="line-numbers language-none"><code class="language-none">删除
+sql = "delete from zzn where id=202091"
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>5、执行sql语句</p>
+<pre class="line-numbers language-none"><code class="language-none">cur.execute(sql)
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>6、向数据库中提交数据</p>
+<pre class="line-numbers language-none"><code class="language-none">conn.commit()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>7、关闭数据库连接（释放资源）</p>
+<pre class="line-numbers language-none"><code class="language-none">conn.close()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h1 id="第四章、修改数据"><a href="#第四章、修改数据" class="headerlink" title="第四章、修改数据"></a>第四章、修改数据</h1><p>1、导入pymysql库</p>
+<pre class="line-numbers language-none"><code class="language-none">import pymysql
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>2、创建数据库连接</p>
+<pre class="line-numbers language-none"><code class="language-none">conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='zzn218', db='zzn', charset='utf8')
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>3、创建游标，插入数据，要创建游标,通过游标对象就可对数据库进行增、删、查、改</p>
+<pre class="line-numbers language-none"><code class="language-none">cur = conn.cursor()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>4、sql语句：对数据库进行增、删、查、改</p>
+<pre class="line-numbers language-none"><code class="language-none">修改
+sql = "update zzn set name="'张三'" where id=20201"
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>5、执行sql语句</p>
+<pre class="line-numbers language-none"><code class="language-none">cur.execute(sql)
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p> 6、向数据库中提交数据</p>
+<pre class="line-numbers language-none"><code class="language-none">conn.commit()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>7、关闭数据库连接（释放资源）</p>
+<pre class="line-numbers language-none"><code class="language-none">conn.close()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h1 id="第五章、查询数据"><a href="#第五章、查询数据" class="headerlink" title="第五章、查询数据"></a>第五章、查询数据</h1><p>1、导入pymysql库</p>
+<pre class="line-numbers language-none"><code class="language-none">import pymysql
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>1、创建数据库连接</p>
+<pre class="line-numbers language-none"><code class="language-none">conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='zzn218', db='zzn', charset='utf8')
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>2、创建游标，插入数据，要创建游标,通过游标对象就可对数据库进行增、删、查、改</p>
+<pre class="line-numbers language-none"><code class="language-none">cur = conn.cursor()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>3、sql语句：对数据库进行增、删、查、改</p>
+<pre class="line-numbers language-none"><code class="language-none">查询语句
+# sql = 'select * from stu;'
+
+sql = "select * from stu where id='1';
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4、执行sql语句</p>
+<pre class="line-numbers language-none"><code class="language-none">cur.execute(sql)
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>5、查询显示所有的记录</p>
+<pre class="line-numbers language-none"><code class="language-none">data = cur.fetchall()
+print(data)
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>6、关闭数据库连接（释放资源）</p>
+<pre class="line-numbers language-none"><code class="language-none">conn.close()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h1 id="第六章、例子"><a href="#第六章、例子" class="headerlink" title="第六章、例子"></a>第六章、例子</h1><pre class="line-numbers language-none"><code class="language-none">导入pymysql库
+import pymysql
+
+
+# 1、创建数据库连接
+conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='zzn218', db='zzn', charset='utf8')
+
+# 2、创建游标，插入数据，要创建游标,通过游标对象就可对数据库进行增、删、查、改
+cur = conn.cursor()
+
+
+# 3、sql语句：对数据库进行增、删、查、改
+# 增加数据函数
+def add_data():
+	sql = input("请输入sql语句：")    
+	# sql = "insert into stu(name, id) values ('张三','20209020201')"    
+	# 4、执行sql语句    
+	cur.execute(sql)    
+	# 5、向数据库中提交数据    
+	conn.commit()
+
+# 查询记录，根据id查询信息
+def find_data():
+	id = input("请输入查询id：")    
+	# 查询语句    
+	sql = "select * from stu where id='"+id+"'"    
+	# 4、执行sql语句    
+	cur.execute(sql)    
+	# 5、查询显示所有的记录    
+	data = cur.fetchall()    
+	if(len(data)&gt;0):        
+		print(data)    
+	else:        
+		print("无！")
+
+# 修改记录
+def revise_data():    
+	id = input("修改记录的id")    
+	information = input("修改的信息")    
+	now_information = input("新信息")    
+	sql = f"update zzn set {information}={now_information} where id={id}"    				cur.execute(sql)
+	conn.commit()
+
+# 删除记录
+def delete_data():    
+	id = input("请输入id：")    
+	sql = f"delete from zzn where id={id}"    
+	cur.execute(sql)    
+	conn.commit()
+
+
+# 6、关闭数据库连接（释放资源）    
+def closs_db():    
+	conn.close()
+
+
+def service():    
+	print("欢迎使用数据库管理系统 1.增加记录 2.查询记录 3.修改记录 4.删除记录 0.退出系统")    
+	while True:        
+		order = input("请输入服务序号：")        
+		if order == "1":            
+			add_data()            
+			closs_db()        
+		elif order == "2":            
+			find_data()            
+			closs_db()        
+		elif order == "3":            
+			revise_data()            
+			closs_db()        
+		elif order == "4":            
+			delete_data()            
+			closs_db()        
+		elif order == "0":            
+			exit()        
+		else:            
+			print("输入错误")
+
+调用service()函数
+service()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -727,7 +1020,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                    <span class="chip bg-color">数据库</span>
+                                </a>
+                            
+                                <a href="/tags/pyMySQL/">
+                                    <span class="chip bg-color">pyMySQL</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1213,7 +1514,7 @@ new Valine({
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Python提供了高效的高级数据结构，还能简单有效地面向对象编程。Python语法和动态类型，以及解释型语言的本质，使它成为多数平台上写脚本和快速开发应用的编程语言。
                         
                     </div>
                     <div class="publish-info">
@@ -1222,11 +1523,27 @@ new Valine({
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            书生
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                    博客篇
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">编程语言</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1250,7 +1567,7 @@ new Valine({
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Java是一门面向对象编程语言，不仅吸收了C++语言的各种优点，还摒弃了C++里难以理解的多继承、指针等概念，因此Java语言具有功能强大和简单易用两个特征。Java语言作为静态面向对象编程语言的代表，极好地实现了面向对象理论，允许程序员以优雅的思维方式进行复杂的编程。
                         
                     </div>
                     <div class="publish-info">
@@ -1259,11 +1576,27 @@ new Valine({
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            书生
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                    博客篇
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">编程语言</span>
+                    </a>
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1501,7 +1834,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.3k</span>&nbsp;字
+                class="white-color">46.3k</span>&nbsp;字
             
             
             

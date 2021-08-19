@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTML5, 计算机 大数据 爬虫 WEB后端 数据分析">
+    <meta name="keywords" content="搜索关键字,HTML5,前端">
     <meta name="description" content="IT | 计算机应用">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -616,12 +616,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/HTML5/">
+                                <span class="chip bg-color">HTML5</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                博客篇
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -639,14 +656,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    16 分
                 </div>
                 
 
@@ -664,7 +681,531 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>1.HTML5基础知识<br>开发工具：Visual Studio Code</p>
+<h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><h2 id="第一章、html5简介"><a href="#第一章、html5简介" class="headerlink" title="第一章、html5简介"></a>第一章、html5简介</h2><p>1、网页<br>网页的基本组成：<br>    –网页是HTML格式的文件，网站是使用HTML,CSS等制作的网页集合。<br>    –基本元素：图片，文字，声音，视频，链接等，以htm或html后缀结尾的文件<br>2、 HTML的认知：<br>    –HTML是超文本标记语言，由一套标记标签组成。是一种描述前端的语言。<br>    –所谓超文本：1.超出文本限制，可以加入图片，声音，动画，多媒体等内容（超出文本限制）<br>        2.超级连接文本，可以从一个文化跳到另一个文本上面</p>
+<p>3、 Web标准的组成部分：<br>结构html：对网页元素的整理和分类<br>表现css：用于设置网页元素的版式，颜色，大小等外观样式<br>行为Javascript：网页模型的定义和交互的编写</p>
+<p>4、html标签之间的关系：包含关系(父子关系)和并列关系(兄弟关系)</p>
+<p>5、html的元素：开始标签与结束标签之间的内容，叫元素。</p>
+<p>6、html的属性：写在开始标签中的内容，叫属性。</p>
+<pre class="line-numbers language-none"><code class="language-none">常用标签属性：
+&lt;body&gt;：bgcolor	背景颜色
+&lt;body&gt;：background	背景图片
+&lt;h1&gt;：align	对齐方式
+&lt;a&gt;：targe	规定打开链接的方法
+
+通用标签属性：
+class：规定元素的类名
+id：规定元素的唯一ID
+title：规定元素的额外信息
+style：规定元素的样式<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1、Emmet语法</p>
+<pre class="line-numbers language-none"><code class="language-none">生成标签：标签名+Tab
+生成多个标签：标签名*数量
+生成父子级标签：ul&gt;li
+生成兄弟级标签：div+span
+生成带类名或id名的标签：.类名、#id名
+生成顺序div标签：div$5
+生成带内容的标签：div{哈哈哈}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h2 id="第二章、标签"><a href="#第二章、标签" class="headerlink" title="第二章、标签"></a>第二章、标签</h2><h4 id="一、结构标签："><a href="#一、结构标签：" class="headerlink" title="一、结构标签："></a>一、结构标签：</h4><pre class="line-numbers language-none"><code class="language-none">根标签，头部标签，标题标签，主体标签
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;&lt;title/&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+
+body标签属性：
+设置颜色：bgcolor="red"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="二、文档类型的声明标签"><a href="#二、文档类型的声明标签" class="headerlink" title="二、文档类型的声明标签"></a>二、文档类型的声明标签</h4><pre class="line-numbers language-none"><code class="language-none">1、HTML的版本号
+&lt;!DOCTYPE html&gt;
+作用：告诉浏览器使用哪种HTML版本来显示网页，写在第一行。
+
+2.lang语言种类
+&lt;html lang="zh-CN"&gt;
+作用：用来定义当前文档显示的语言en:英语、zh-CN:中文。
+
+3.字符集：编码类型(UTF-8、GBK...)
+&lt;meta charset="UTF-8" /&gt;
+
+4.html常用标签：
+1.标题2.文本3.图片4.连接5.列表6.表格7.表单8.框架<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="三、标题标签："><a href="#三、标题标签：" class="headerlink" title="三、标题标签："></a>三、标题标签：</h4><p>1、标题栏标签</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;title&gt;&lt;/title&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>2、标题标签</p>
+<pre class="line-numbers language-none"><code class="language-none">标题标签，文字加粗，一行显示&lt;h1&gt;标题&lt;/h1&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;h2&gt;&lt;/h2&gt;
+&lt;h3&gt;&lt;/h3&gt;
+&lt;h4&gt;&lt;/h4&gt;
+&lt;h5&gt;&lt;/h5&gt;
+&lt;h6&gt;&lt;/h6&gt;
+
+标签属性：
+align:设置对齐方式，值：center、left、right<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="四、文本标签："><a href="#四、文本标签：" class="headerlink" title="四、文本标签："></a>四、文本标签：</h4><p>1、段落标签：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;&lt;/p&gt;
+作用：分段，段落与段落之间会有间隙&lt;p&gt;分段&lt;/p&gt;
+
+标签属性：
+align：值：居中对齐：center、左对齐：left、右对齐：right、两端对齐：justify<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、 换行标签：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;/br&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>3、水平线标签</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;hr&gt;
+
+&lt;hr size="10" width="50%" align="right" color="red" noshade&gt;
+
+属性：
+size: 设置水平线粗细
+width:设置水平长度
+align:设置水平线对齐方式
+color:设置水平线颜色
+noshade:取消水平线阴影
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4、文本格式化标签：</p>
+<pre class="line-numbers language-none"><code class="language-none">加粗：		&lt;b&gt;加粗&lt;/b&gt;
+斜体：		&lt;i&gt;斜体&lt;/i&gt;
+下划线：	&lt;u&gt;下划线&lt;/u&gt;
+删除线：	&lt;s&gt;删除线&lt;/s&gt;
+上标：		 &lt;sub&gt;上标&lt;/sub&gt;
+下标：		 &lt;sup&gt;下标&lt;/sup&gt;
+删除线：	&lt;del&gt;删除线&lt;/del&gt;
+强调字，粗体： &lt;strong&gt;加粗&lt;/strong&gt;
+强调字，粗体：	&lt;em&gt;加粗&lt;/em&gt;
+引用字，斜体：	&lt;cite&gt;&lt;/cite&gt;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">字体标签：&lt;font&gt;
+
+&lt;font size=10 color="red" face="黑体"&gt;你好，世界&lt;/font&gt;
+
+标签的属性：
+大小:size
+颜色:color
+字体:face
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>5、文字样式：</p>
+<blockquote>
+<pre><code>   注释：&lt;!--注释--&gt;
+
+
+                   特殊字符：
+                   空格  &amp;#160; &amp;nbsp;空格
+                   &lt;    &amp;#60; &amp;lt;小于号
+                   =    &amp;#61;    等于符号
+                   &gt;    &amp;#62; &amp;gt;大于号
+                   !    &amp;#33;    惊叹号
+                   ”    &amp;#34; &amp;quot; 双引号
+
+                   #    &amp;#35;    数字标志
+                   $    &amp;#36;    美元标志
+                   %    &amp;#37;    百分号
+                   &amp;    &amp;#38; &amp;amp;
+                   ‘    &amp;#39;    单引号
+                   (    &amp;#40;    小括号左边部分
+                   )    &amp;#41;    小括号右边部分
+
+                   *    &amp;#42;    星号
+                   +    &amp;#43;    加号
+                       ,    &amp;#44;    逗号
+                       –    &amp;#45;    连字号
+                       .    &amp;#46;    句号
+                       /    &amp;#47;    斜杠
+                       :    &amp;#58;    冒号
+                       ;    &amp;#59;    分号
+                       ?    &amp;#63;    问号
+                       @    &amp;#64;
+                       [    &amp;#91;    中括号左边部分
+                       \    &amp;#92;    反斜杠
+                       ]    &amp;#93;    中括号右边部分
+                       ^    &amp;#94;    Caret
+                       _    &amp;#95;    下划线
+                       `    &amp;#96;
+                       {    &amp;#123;    大括号左边部分
+                       |    &amp;#124;    竖线
+                       }    &amp;#125;    大括号右边部分
+                       ~    &amp;#126;    Tilde
+                       —    &amp;#127;    未使用</code></pre>
+</blockquote>
+<h4 id="五、块元素标签与行元素标签："><a href="#五、块元素标签与行元素标签：" class="headerlink" title="五、块元素标签与行元素标签："></a>五、块元素标签与行元素标签：</h4><p>1、块元素显示时，会以新行开始的</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;div&gt;、&lt;h1&gt;、&lt;p&gt;、&lt;ul&gt;、&lt;ol&gt;、&lt;dl&gt;、&lt;table&gt;、&lt;address&gt;、&lt;blockquote&gt;、&lt;form&gt;
+
+（1）&lt;div&gt;标签
+&lt;div&gt;&lt;/div&gt;
+作用：
+&lt;div&gt;标签时块元素，主要是组合HTML元素的容器。&lt;div&gt;标签用来布局，独占一行，块级元素，类似于一个超大盒子。
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、行元素标签</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;span&gt; &lt;b&gt; &lt;a&gt; &lt;img&gt; &lt;strong&gt;&lt;sub&gt;&lt;sup&gt;&lt;em&gt;&lt;i&gt;&lt;big&gt;&lt;small&gt;&lt;br&gt;
+
+&lt;span&gt;组合文档中的行内元素
+&lt;input&gt;输入框
+&lt;samp&gt;定义样本文本
+&lt;var&gt;定义变量
+&lt;abbr&gt;表示一个缩写形式
+&lt;acronym&gt;定义只取首字母缩写
+&lt;bdo&gt;可覆盖默认的文本方向
+&lt;cite&gt;引用进行定义
+&lt;code&gt;定义计算机代码文本
+&lt;dfn&gt;定义一个定义项目
+&lt;kbd&gt;定义键盘文本
+&lt;label&gt;标签为
+&lt;q&gt;定义短的引用
+&lt;select&gt;创建单选或多选菜单
+&lt;textarea&gt;多行的文本输入控件
+&lt;tt&gt;打字机或者等宽的文本效果
+
+
+（2）&lt;span&gt;标签
+&lt;span&gt;&lt;/span&gt;
+作用：
+&lt;span&gt;标签是内联元素，可作为文本容器。&lt;span&gt;标签用来布局，一行可多个&lt;span&gt;标签，行级标签，类似于一个小盒子。
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="六、图片标签："><a href="#六、图片标签：" class="headerlink" title="六、图片标签："></a>六、图片标签：</h4><p>1、图片标签 <img></p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;img src="图片url" width="500" height="600" border="10" alt="秘密" title="图片" /&gt;
+
+(1). img标签的属性：
+src：图片路径
+width：图片宽度
+height：图片高度
+border：图片边框的粗细
+align：对齐方式
+alt：替换文本，当图片不能显示，就会显示文字。
+title：提示文本，当鼠标放在图片上，就会显示的文本。
+hapace：图片周围水平空白，10px
+vspace：图片周围垂直空白，10px
+
+
+(2). src后面接图片路径，有绝对路径和相对路径
+绝对路径：C:\Users\曾钟宁\Desktop\Web/a.jpg
+网络的绝对路径：https://pics7.baidu.com/feed/fcfaaf51f3deb48f9a5543a351563e212df57864.png?token=cfe6bb0a155ba37ac7ffd7935563c4a5&amp;s=09A062975C5074C61418E06003007077
+相对目录：/表示下一级，../表示上一级，../../a.jpg
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="七、链接标签"><a href="#七、链接标签" class="headerlink" title="七、链接标签"></a>七、链接标签</h4><p>1、<a>标签</a></p><a>
+<pre class="line-numbers language-none"><code class="language-none">超链接:
+&lt;a href="https://baidu.com" target="目标窗口的弹出方式"&gt;文本，图片，音频，视频，表格&lt;/a&gt;
+
+(1)、a标签的属性：
+href：指定链接目标的url
+target属性：&lt;a href="www.xxx.com" target="_blank/_self/_parent/_top/framename"&gt;a&lt;/a&gt;
+	指定链接页面的打开方式，_self为默认值,当前窗口打开，_blank为新窗口打开。
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、超链接的分类:</p>
+<pre class="line-numbers language-none"><code class="language-none">外部链接：&lt;a href="https://baidu.com"&gt;百度&lt;/a&gt;
+
+内部链接：网站内部的网页之间的相互连接，&lt;a href="文件名.后缀"&gt;文件&lt;/a&gt;
+
+空连接：&lt;a href="#"&gt;文件&lt;/a&gt;
+
+下载连接：&lt;a href="img.zip"&gt;下载文件.zip/.exe&lt;/a&gt;
+
+网页元素链接：文本，图片，音频，视频，表格
+
+锚点链接：可以快速定位页面中的某个位置
+在链接文本的href属性中，设置"#id"，&lt;a href="#id"&gt;a&lt;/a&gt;
+在目标位置标签里添加一个id属性值，&lt;h3 id="id"&gt;跳转位置&lt;/h3&gt;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+</a><h4 id="八、列表标签："><a></a><a href="#八、列表标签：" class="headerlink" title="八、列表标签："></a>八、列表标签：</h4><p>1、 无序列表</p><ul><li><p></p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;lu&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;列表项&lt;/li&gt;
+	&lt;li&gt;列表项&lt;/li&gt;
+	......
+&lt;/ul&gt;
+
+&lt;ul&gt;标签属性：
+设置符号样式：type = disc:实心圆、circle:空心圆、square:方块、
+
+
+无序列表是并列关系，&lt;ul&gt;里面只能放&lt;li&gt;标签，&lt;li&gt;标签里面可以容纳所有元素
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、有序列表</p><ol><li><p></p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;ol&gt;
+	&lt;li&gt;列表项1&lt;/li&gt;
+	&lt;li&gt;列表项2&lt;/li&gt;
+	......
+&lt;/ol&gt;
+
+&lt;ol&gt;标签属性
+设置序号样式：type = 1、A、a、I
+设置起始值：start =
+
+
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3、 自定义列表</p><dl><dt></dt><dd><p></p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;dl&gt;
+	&lt;dt&gt;列表小标题&lt;/dt&gt;
+	&lt;dd&gt;内容&lt;/dd&gt;
+	&lt;dd&gt;内容&lt;/dd&gt;
+	......
+&lt;/dl&gt;
+
+（2）、&lt;dl&gt;标签的属性
+
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h4 id="九、表格标签"><a href="#九、表格标签" class="headerlink" title="九、表格标签"></a>九、表格标签</h4><p>作用：展示数据<br>1、表格标签：<br>表头单元格里的文字会加粗的居中</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;table&gt;		定义表格
+&lt;caption&gt;	定义表格标题
+&lt;tr&gt;		定义表格的行
+&lt;th&gt;		定义表格的表头
+&lt;td&gt;		定义表格的单元
+
+&lt;thead&gt;		定义表格的页眉
+&lt;tbody&gt;		定义表格的主体
+&lt;tfoot&gt;		定义表格的页脚
+&lt;col&gt;		定义表格的列属性
+
+2、 表格的相关属性：
+tatle标签属性：
+width：规定表格的宽度
+height：规定表格的高度
+align：规定表格元素的对齐方式，left、center、right。
+border：规定表格单元是否有边框，1、""
+cellpadding：规定单元边沿与内容之间的空白，默认为1像素
+cellspacing：规定单元格之间的空白，默认为2像素
+
+caption标签属性：
+设置表格标题位置 align：默认:top、底部:bottom、右边:right
+
+tr标签属性：
+width：规定表格行的宽度
+height：规定表格行的高度
+align：规定表格行的水平对齐方式，left、center、right。
+valign：规定表格行的垂直对齐方式，默认:middle、top、bottom
+bgcolor：设置表格行的背景颜色
+background：设置表格行的背景图
+
+
+3、td标签属性：
+合并行单元格：colspan； 合并行单元格colspan写在最左行
+合并列单元格：rowspan；合并列单元格rowspan写在最上列
+width：规定表格行的宽度
+height：规定表格行的高度
+align：规定表格行的水平对齐方式，left、center、right。
+valign：规定表格行的垂直对齐方式，默认:middle、top、bottom
+bgcolor：设置表格行的背景颜色
+background：设置表格行的背景图
+
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;表头单元格&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;单元格&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>例子</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;表格&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table border=1 cellpadding="0" cellspacing="0" align="center" width=400px height=200px&gt;
+        &lt;caption&gt;&lt;h2&gt;热门歌曲&lt;/h2&gt;&lt;/caption&gt;
+        &lt;tr&gt;
+            &lt;th align="center"&gt;序号&lt;/th&gt;
+            &lt;th align="center"&gt;名称&lt;/th&gt;
+            &lt;th align="center"&gt;歌手&lt;/th&gt;
+            &lt;th align="center"&gt;时长&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align="center"&gt;01&lt;/td&gt;
+            &lt;td align="center"&gt;明年今日&lt;/td&gt;
+            &lt;td align="center"&gt;陈奕迅&lt;/td&gt;
+            &lt;td align="center"&gt;02:34&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align="center"&gt;02&lt;/td&gt;
+            &lt;td align="center"&gt;青花瓷&lt;/td&gt;
+            &lt;td align="center"&gt;周杰伦&lt;/td&gt;
+            &lt;td align="center"&gt;02:56&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
+<h4 id="十、框架标签（已过时）"><a href="#十、框架标签（已过时）" class="headerlink" title="十、框架标签（已过时）"></a>十、框架标签（已过时）</h4><p>1、框架标签 frame:</p>
+<p>2、框架集标签 frameset:</p>
+<p>3、常用标签：</p>
+<pre class="line-numbers language-none"><code class="language-none">noresize: 固定框架大小
+cols: 列
+rows: 行
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4、内联框架 iframe:  </p>
+<h4 id="十一、表单标签："><a href="#十一、表单标签：" class="headerlink" title="十一、表单标签："></a>十一、表单标签：</h4><p>表单的组成：表单域，表单元素，提示信息<br>1、表单域</p><form></form><p></p>
+<pre class="line-numbers language-none"><code class="language-none">用于定义表单域，以实现用户信息的搜集和传递
+&lt;form&gt;&lt;/form&gt; 
+
+&lt;form&gt;标签的属性：
+属性action：属性值url地址
+作用：用于接收并处理表单数据的服务器的url地址
+属性method：属性值get/post
+作用：用于设置表单数据的提交方式
+属性name：属性值名称
+作用：用于指定表单域的名称，以区分同一个页面中的多个表单域
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>2、 表单元素</p>
+<p>1）input输入表单元素</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;input type="属性值" name="元素名" value="请求输入" checked="" maxlength="30" /&gt;
+
+input标签的属性：
+type、name、value、checked、maxlength
+
+属性type的属性值：
+text		定义单行的输入字段(文本框)，用户可在其中输入文字
+password	定义密码字段，会进行掩码
+radio		定义单选按钮，可以实现多选一，必须写上相同的name属性
+checkbox	定义复选框，可以实现多选，必须写上相同的name属性
+submit		定义提交按钮，可以把表单元素里的值提交给后台服务器
+reset		定义重置按钮，可以重置表单中的所有数据
+button		定义可点击按钮，(onclick=""，一般通过JavaScript启动脚本)
+file		定义字段和“浏览”按钮，文件上传用(能上传头像之类的)
+hidden		定义隐藏的输入字段
+image		定义图像形式的提交按钮
+
+属性name=用户自定义
+作用：定义input元素的名称
+
+属性value=用户自定义
+作用：用于规定input元素的值
+
+属性checked=checked
+作用：规定input元素首次加载时应当被选中
+
+属性maxlength=正整数
+作用：规定输入字段中字符的最大长度
+
+&lt;label&gt;标签：是input元素定义的标注标签
+作用：增加input元素的点击范围
+例如：
+&lt;label for="sex"&gt;男&lt;/label&gt;
+&lt;input type="radio" name="sex" id="sex" /&gt;
+
+点击按钮后触发的事件
+onclick=""
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>2）select下拉表单元素</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;select&gt;
+&lt;option&gt;选项1&lt;/option&gt;
+&lt;option&gt;选项2&lt;/option&gt;
+&lt;option&gt;选项3&lt;/option&gt;
+......
+&lt;/select&gt;
+在&lt;option&gt;中定义select="selected"时，当前项即为默认选中项
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>3）textarea文本域元素</p>
+<pre class="line-numbers language-none"><code class="language-none">textarea用于定义多行文本输入的控件(留言板之类的)
+&lt;textarea rows="3" cols="20"&gt;
+文本
+&lt;/textarea&gt;
+
+属性rows="显示的行数"
+属性cols="每行的字符数"
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>3、CSS样式引入</p>
+<pre class="line-numbers language-none"><code class="language-none">1、标签：
+	&lt;style&gt;：样式定义
+	&lt;link&gt;：样式引用
+2、属性：
+	rel="stylasheet"	外部样式表
+	type="text/cass"	引入样式的类型
+	margin-left			边距
+
+3、三种样式表插入方法：
+外部样式表：&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
+
+内部样式：
+&lt;style type="text/css"&gt;
+	body {background-color.red}
+	p{margin-left:20px}
+&lt;/style&gt;
+
+内联样式表：
+&lt;p style="color:red"&gt;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+</dd></dl></li></ol></li></ul>
                 
             </div>
             <hr/>
@@ -727,7 +1268,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/HTML5/">
+                                    <span class="chip bg-color">HTML5</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1201,19 +1750,19 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/ba003d1c.html">
+                <a href="/posts/cc1b9611.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928021707.jpg" class="responsive-img" alt="C语言程序设计">
+                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928015238.jpg" class="responsive-img" alt="JavaScript">
                         
-                        <span class="card-title">C语言程序设计</span>
+                        <span class="card-title">JavaScript</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            JavaScript（简称“JS”） 是一种具有函数优先的轻量级，解释型或即时编译型的编程语言。虽然它是作为开发Web页面的脚本语言而出名，但是它也被用到了很多非浏览器环境中，JavaScript 基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式、声明式、函数式编程范式。
                         
                     </div>
                     <div class="publish-info">
@@ -1222,11 +1771,27 @@ new Valine({
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            书生
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                    博客篇
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1250,7 +1815,7 @@ new Valine({
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。CSS不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。
                         
                     </div>
                     <div class="publish-info">
@@ -1259,11 +1824,27 @@ new Valine({
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            书生
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                    博客篇
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1501,7 +2082,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.3k</span>&nbsp;字
+                class="white-color">46.3k</span>&nbsp;字
             
             
             

@@ -2,21 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yanjiuzhe.github.io/posts/6bcf31ad.html</loc>
-    
-    <lastmod>2021-08-19</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://yanjiuzhe.github.io/posts/dbb714e3.html</loc>
-    
-    <lastmod>2021-08-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yanjiuzhe.github.io/posts/dd5b5f9c.html</loc>
     
     <lastmod>2021-08-19</lastmod>
     
@@ -30,7 +16,7 @@
   </url>
   
   <url>
-    <loc>https://yanjiuzhe.github.io/posts/2432baef.html</loc>
+    <loc>https://yanjiuzhe.github.io/posts/a4a81253.html</loc>
     
     <lastmod>2021-08-19</lastmod>
     
@@ -38,13 +24,6 @@
   
   <url>
     <loc>https://yanjiuzhe.github.io/posts/cc1b9611.html</loc>
-    
-    <lastmod>2021-08-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yanjiuzhe.github.io/posts/ba003d1c.html</loc>
     
     <lastmod>2021-08-19</lastmod>
     
@@ -65,7 +44,21 @@
   </url>
   
   <url>
-    <loc>https://yanjiuzhe.github.io/posts/a4a81253.html</loc>
+    <loc>https://yanjiuzhe.github.io/posts/6bcf31ad.html</loc>
+    
+    <lastmod>2021-08-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yanjiuzhe.github.io/posts/dd5b5f9c.html</loc>
+    
+    <lastmod>2021-08-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yanjiuzhe.github.io/posts/2432baef.html</loc>
     
     <lastmod>2021-08-19</lastmod>
     
@@ -200,7 +193,84 @@
 
   
   <url>
+    <loc>https://yanjiuzhe.github.io/tags/HTML5/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjiuzhe.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjiuzhe.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjiuzhe.github.io/tags/pyMySQL/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjiuzhe.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjiuzhe.github.io/tags/CSS/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjiuzhe.github.io/tags/JavaScript/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yanjiuzhe.github.io/tags/Linux/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjiuzhe.github.io/tags/python/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjiuzhe.github.io/tags/%E7%88%AC%E8%99%AB/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjiuzhe.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanjiuzhe.github.io/tags/Java/</loc>
     <lastmod>2021-08-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

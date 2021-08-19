@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaScript, 计算机 大数据 爬虫 WEB后端 数据分析">
+    <meta name="keywords" content="搜索关键字,前端,JavaScript">
     <meta name="description" content="IT | 计算机应用">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -616,12 +616,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                博客篇
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -639,14 +656,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    4.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    18 分
                 </div>
                 
 
@@ -664,7 +681,752 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h1 id="第一章、JavaScript基础语法"><a href="#第一章、JavaScript基础语法" class="headerlink" title="第一章、JavaScript基础语法"></a>第一章、JavaScript基础语法</h1><h3 id="一、基本语法"><a href="#一、基本语法" class="headerlink" title="一、基本语法"></a>一、基本语法</h3><p>1、标识符：由字母、数字、下划线、美元符组成，数字不能使首位，不能是关键字。</p>
+<p>2、严格区分大小写。</p>
+<p>3、代码以空格和括号分隔，以分号结尾。</p>
+<p>4、注释：//、/* */</p>
+<h3 id="二、基本数据类型"><a href="#二、基本数据类型" class="headerlink" title="二、基本数据类型"></a>二、基本数据类型</h3><p>1、number(数值)类型</p>
+<p>2、string(字符)类型</p>
+<p>3、boolean(布尔)类型</p>
+<p>4、object(对象)类型</p>
+<h3 id="三、常量与变量"><a href="#三、常量与变量" class="headerlink" title="三、常量与变量"></a>三、常量与变量</h3><p>1、常量</p>
+<pre class="line-numbers language-none"><code class="language-none">字符串常量："你好，世界！"
+数值型常量：0; 1; 1.5;
+布尔型常量：true; false;
+特殊常量：空值; 控制字符;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、变量</p>
+<p>定义变量：var 变量名=值;</p>
+<pre class="line-numbers language-none"><code class="language-none">var x,y,z = 10;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>3、全局变量与局部变量</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script&gt;
+	var x=10; y=20; // 全局变量
+	function dome(){
+		var z=30; // 局部变量
+		i = 40; //全局变量
+	}
+	dome();
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="四、输出语句和输入语句"><a href="#四、输出语句和输入语句" class="headerlink" title="四、输出语句和输入语句"></a>四、输出语句和输入语句</h3><p>1、输出语句</p>
+<pre class="line-numbers language-none"><code class="language-none">（1）用document对象的write()方法
+document.write();
+
+（2）用window对象的alert()方法
+alert();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、输入语句</p>
+<pre class="line-numbers language-none"><code class="language-none">（1）用window对象的prompt()方法
+prompt();
+
+（2）用文本框输入，使用onBlur事件处理程序得到文本框中的内容
+&lt;form name="chform" method="POST"&gt;
+	请输入：&lt;input type="text" name="textname" onblur="test(this.value)" value="" size="10"&gt;
+&lt;/form&gt;
+
+&lt;script language="JavaScript"&gt;
+	function test(str){
+		alert(str);
+	}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h3 id="五、关键字"><a href="#五、关键字" class="headerlink" title="五、关键字"></a>五、关键字</h3><p>1、控制流：if-else、for、for-in、while、break、continue、return</p>
+<p>2、常数/文字：NaN、null、turn、false、Infinity、NEGATIVE_INFINITY、POSITIVE_INFINTY</p>
+<p>3、赋值：=、OP=</p>
+<p>4、对象：Array、Boolean、Date、Function、Global、Math、Number、Object、String</p>
+<p>5、函数：funtion、Function</p>
+<p>6、对象创建：new</p>
+<p>7、其他：this、var、with</p>
+<h3 id="六、运算符"><a href="#六、运算符" class="headerlink" title="六、运算符"></a>六、运算符</h3><p>1、算数运算符</p>
+<p>+、-、*、%、/、++、–</p>
+<p>2、赋值运算符</p>
+<p>=、+=、-=、*=、/=、%=</p>
+<p>3、字符操作</p>
+<p>连接+</p>
+<p>4、比较运算符</p>
+<p>==、!=、&gt;、&lt;、&gt;=、&lt;=</p>
+<p>5、逻辑运算符</p>
+<p>&amp;&amp;、||、！</p>
+<p>6、三目运算符</p>
+<p>1 &lt; 2 ? “正确” : “错误”</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;&lt;h2&gt;算数运算符&lt;/h2&gt;&lt;/p&gt;
+&lt;p&gt;i = 10, j = 10; i + j = ?&lt;/p&gt;
+&lt;p id="sumid"&gt;&lt;/p&gt;
+&lt;button onclick="mysum()"&gt;结果&lt;/button&gt;
+&lt;script&gt;
+	function mysum() {
+		var i = 10;
+		var j = 10;
+		var m = i + j;          					document.getElementById("sumid").innerHTML=m;
+    }
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="七、条件语句"><a href="#七、条件语句" class="headerlink" title="七、条件语句"></a>七、条件语句</h3><p>1、条件语句：if - else if - else</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;&lt;h2&gt;条件语句&lt;/h2&gt;&lt;/p&gt;
+&lt;script&gt;
+	var i = 10;
+	if (i &gt; 0){
+		document.write("i大于0");
+	}else if (1==0){
+		document.write("i等于0");
+	}else{
+		document.write("i小于0");
+	}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、条件分支语句：switch</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script&gt;
+	var i = 1;
+	switch (i){
+		case 1: document.write("哈哈哈哈");break;
+		case 2: document.write("嘻嘻嘻嘻");break;
+		case 3: document.write("嘿嘿嘿嘿");break;
+		case 4: document.write("呵呵呵呵");break;
+		case 5: document.write("呜呜呜呜");break;
+		default: document.write("条件不满足");break;
+	}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="八、循环语句"><a href="#八、循环语句" class="headerlink" title="八、循环语句"></a>八、循环语句</h3><p>1、循环语句：for</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script&gt;
+	var i = [1,2,3,4,5];
+	for (var j=0; j&lt;6; j++){
+		document.write(i[j]+"、");
+	}
+&lt;/script&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>2、循环语句：while</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;while&lt;/p&gt;
+&lt;script&gt;
+	var i = 1;
+	while (i&lt;10){
+		document.write("i="+i+"&lt;br/&gt;");
+		i++;
+	}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>3、循环语句：do-while</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;do-while&lt;/p&gt;
+&lt;script&gt;
+	var i = 1;
+	do {
+		document.write("i="+i+"&lt;br/&gt;");
+		i++;
+	}while (i&lt;10)
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="九、跳转语句"><a href="#九、跳转语句" class="headerlink" title="九、跳转语句"></a>九、跳转语句</h3><p>1、跳转语句：break</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script&gt;
+	for (var i=0;i&lt;10;i++){
+		if (i==5){
+			break;
+		}
+		document.write("i="+i+"&lt;br/&gt;");
+	}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>2、跳转语句：continue</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script&gt;
+	for (var i=0;i&lt;10;i++){
+		if (i==5){
+			continue;
+		}
+		document.write("i="+i+"&lt;br/&gt;");
+	}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h1 id="第二章、函数"><a href="#第二章、函数" class="headerlink" title="第二章、函数"></a>第二章、函数</h1><h3 id="一、函数简介"><a href="#一、函数简介" class="headerlink" title="一、函数简介"></a>一、函数简介</h3><p>函数是由事件驱动的，是可重复使用的代码块。</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;简单函数&lt;/p&gt;
+&lt;script&gt;
+	// 创建函数
+	function sum(){、
+		var a = 10;
+		var b = 10;
+		var c=a+b;
+		alert(s1);
+	}
+	// 调用函数
+	sum();
+&lt;/script&gt;
+
+alert()：弹出对话框<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二、定义函数"><a href="#二、定义函数" class="headerlink" title="二、定义函数"></a>二、定义函数</h3><pre class="line-numbers language-none"><code class="language-none">// 格式
+functio 函数名（）{
+	函数体；
+}
+
+// 例子
+&lt;p&gt;定义函数&lt;/p&gt;
+&lt;script&gt;
+	function tell(){
+		var n = 10;
+		var m = 10;
+		var vl = n*m;
+		alert(vl)
+	}
+&lt;/script&gt;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="三、函数调用"><a href="#三、函数调用" class="headerlink" title="三、函数调用"></a>三、函数调用</h3><pre class="line-numbers language-none"><code class="language-none">第一种方法：直接调用
+&lt;script&gt;
+	// 创建函数
+	function sum(a,b){
+		var c=a+b;
+		alert(c)
+	}
+	// 调用函数
+	sum(10,20);
+&lt;/script&gt;
+
+第二种方法：
+&lt;script&gt;
+	// 创建函数
+	function sum(a,b){
+		var c=a+b;
+		alert(c)
+	}
+&lt;/script&gt;
+&lt;button onclick="sum(10,20)"&gt;按钮&lt;/button&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="四、带参数的函数"><a href="#四、带参数的函数" class="headerlink" title="四、带参数的函数"></a>四、带参数的函数</h3><p>函数参数：在函数调用时传递的值，叫参数。</p>
+<pre class="line-numbers language-none"><code class="language-none">sum(arg1,arg2)
+
+// 例子
+&lt;p&gt;带参数的函数&lt;/p&gt;
+&lt;script&gt;
+	function print(name){
+		alert("Hello，我是"+name);
+	}
+&lt;/script&gt;
+&lt;button onclick="print('jk')"&gt;按钮&lt;/button&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="五、带返回值的函数"><a href="#五、带返回值的函数" class="headerlink" title="五、带返回值的函数"></a>五、带返回值的函数</h3><pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;带返回值的函数&lt;/p&gt;
+&lt;p id="pid"&gt;&lt;/p&gt;
+&lt;script&gt;
+	function hello(){
+		return "Hello";
+	}
+	document.getElementById("pid").innerHTML=hello();
+&lt;/script&gt;
+
+return：将值返回
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="六、内置函数"><a href="#六、内置函数" class="headerlink" title="六、内置函数"></a>六、内置函数</h3><p>1、数学函数</p>
+<pre class="line-numbers language-none"><code class="language-none">random：回返0-1区间的随机数
+parseInt：将字符转串转换成整数
+parseFloat：将字符串转换成浮点数
+pow：返回一个幂次方
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、字符串函数</p>
+<pre class="line-numbers language-none"><code class="language-none">indexOF：返回String对象子字符串第一次出现的位置
+lastindexOf：返回String对象子字符串最后一次出现的位置
+split：将字符串以指定的字符分割，返回一个数组<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>3、时间函数</p>
+<pre class="line-numbers language-none"><code class="language-none">getFullYear 返回年
+getDate		返回月
+getDay		返回星期
+getHours	返回小时<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4、常用函数</p>
+<pre class="line-numbers language-none"><code class="language-none">join  将数组中的元素连接成字符串对象
+max		返回两数中较大的数
+min		返回两数中较小的数
+reverse 反序<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
+<h1 id="第三章、异常处理与事件处理"><a href="#第三章、异常处理与事件处理" class="headerlink" title="第三章、异常处理与事件处理"></a>第三章、异常处理与事件处理</h1><h3 id="一、异常处理"><a href="#一、异常处理" class="headerlink" title="一、异常处理"></a>一、异常处理</h3><p>1、异常：当JavaScript引擎执行程序时，发生错误，导致程序停止运行。</p>
+<p>2、异常抛出：当异常产生，并将这个异常生成错误信息。</p>
+<p>3、异常捕获 try-catch()</p>
+<pre class="line-numbers language-none"><code class="language-none">try{
+	发生异常的代码块；
+}catch(err){
+	错误信息处理；
+}
+
+// 例子
+&lt;p&gt;异常捕获&lt;/p&gt;
+&lt;script&gt;
+	function doem(){
+		try{
+			alert(str);
+		}catch(err){
+			alert(err);
+		}
+	}
+	dome();
+&lt;/script&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4、自定义异常 throw</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;自定义异常&lt;/p&gt;
+&lt;!-- 创建文本框和提交按钮 --&gt;
+&lt;form action=""&gt;
+	&lt;input type="text" id="tid"&gt;
+	&lt;input type="button" onclick="dome()" value="按钮" id="bid"&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+	function doem(){
+        try{
+            var e = document.getElementById("tid").value;
+            if (e = ""){
+                throw "请输入";
+            }
+        }catch(err){
+            alert(err);
+        }
+	}
+	dome()
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二、事件处理"><a href="#二、事件处理" class="headerlink" title="二、事件处理"></a>二、事件处理</h3><p>1、事件：事件是可以被JavaScript侦测到的行为。</p>
+<pre class="line-numbers language-none"><code class="language-none">onClick		单击事件
+onMouseOver	鼠标经过事件
+onMouseOut	鼠标移出事件
+onChange	文本内容改变事件
+onSelect	文本框选中事件
+onFocus		光标聚集事件
+onBlur		移开事件
+onLoad		网页加载事件
+onUnload	关闭网页事件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、单击事件 onClick</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script&gt;
+	// 创建函数
+	function sum(a,b){
+		var c=a+b;
+		alert(c)
+	}
+	// 调用函数
+	// sum(10,20);
+&lt;/script&gt;
+&lt;button onclick="sum(10,20)"&gt;按钮&lt;/button&gt;
+
+onclick=""<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3、鼠标经过事件 onMouseOver与鼠标移出事件 onMouseOut</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;div class="div" onmouseout="onOut(this)" onmouseover="onOver(this)"&gt;&lt;/div&gt;
+&lt;script&gt;
+	function onOver(ooj){
+		ooj.innerHTML = "Hello";
+	}
+	function onOut(ooj){
+		ooj.innerHTML = "World";
+	}
+&lt;/script&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4、文本内容改变事件 onChange</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;文本内容改变事件 onChange&lt;/p&gt;
+&lt;form action=""&gt;
+	&lt;input type="text" onchange="changeDemo(this)"&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+	function changeDemo(bg){
+		alert("Hello，内荣改变了")
+	}
+&lt;/script&gt;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>5、文本框选中事件 onSelect</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;文本框选中事件 onSelect&lt;/p&gt;
+&lt;form action=""&gt;
+	&lt;input type="text" onselect="changeDemo(this)"&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+	function changeDemo(bg){
+		bg.style.background="red";
+	}
+&lt;/script&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>6、光标聚集事件 onFocus</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;光标&lt;/p&gt;
+&lt;form action=""&gt;
+	&lt;input type="text" onfocus="changeDemo1(this)"&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+	function changeDemo1(bg){
+		bg.style.background="blue";
+	}
+&lt;/script&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h1 id="第四章、文档对象模型-DOM对象"><a href="#第四章、文档对象模型-DOM对象" class="headerlink" title="第四章、文档对象模型-DOM对象"></a>第四章、文档对象模型-DOM对象</h1><h3 id="一、DOM简介"><a href="#一、DOM简介" class="headerlink" title="一、DOM简介"></a>一、DOM简介</h3><p>1、HTML DOM：当网页被加载时，浏览器会创建页面的文档对象模型（Documet Object Model）</p>
+<p>2、DOM操作HTML：</p>
+<p>（1）JavaScript能改变页面中的所有HTML元素</p>
+<p>（2）JavaScript能改变页面中的所有HTML属性</p>
+<p>（3）JavaScript能改变页面中的所有CSS样式</p>
+<p>（4）JavaScript能对页面中的所有事件做出反应</p>
+<h3 id="二、DOM操作HTML"><a href="#二、DOM操作HTML" class="headerlink" title="二、DOM操作HTML"></a>二、DOM操作HTML</h3><p>1、改变HTML的输出流：</p>
+<pre class="line-numbers language-none"><code class="language-none">document.write("hello");
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>2、寻找元素：</p>
+<p>（1）通过id寻找元素 getElementById(“id名”);</p>
+<pre class="line-numbers language-none"><code class="language-none">document.getElementById("pid");
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（2）通过标签寻找元素 getElementsByTagName(“标签名”);</p>
+<pre class="line-numbers language-none"><code class="language-none">document.getElementsByTagName("p");
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>3、改变HTML的内容：innerHTML=”内容”</p>
+<pre class="line-numbers language-none"><code class="language-none">document.getElementById("pid").innerHTML="ws";
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>4、改变HTML的属性 </p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;a id="aid" href="http://www.baidu.com"&gt;搜索&lt;/a&gt;
+&lt;button onclick="demo()"&gt;切换搜索引擎&lt;/button&gt;
+&lt;script&gt;
+	function demo(){
+		document.getElementById("aid").href="https://cn.bing.com/";
+	}
+&lt;/script&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>5、DOM对象操作HTML元素详解</p>
+<pre class="line-numbers language-none"><code class="language-none">getElementsByName()		获取name
+getElementsByTagName()	获取元素
+getAttribute()			获取元素属性
+setAttribute()			设置元素属性
+childNodes()			访问子节点
+parentNode()			访问父节点
+createElement()			创建元素节点
+createTextNode			创建文本节点
+insertBefore()			插入节点
+removeChild()			删除节点
+offsetHeight			网页尺寸
+scrollHeight			网页尺寸
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="三、DOM操作CSS"><a href="#三、DOM操作CSS" class="headerlink" title="三、DOM操作CSS"></a>三、DOM操作CSS</h3><p>1、改变CSS样式</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        .div {
+            background-color: red;
+            width: 101px;
+            height: 100px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="div" class="div"&gt; 你好，世界！&lt;/div&gt;
+    &lt;button onclick="demo()"&gt;切换&lt;/button&gt;
+    &lt;script&gt;
+        function demo(){
+            document.getElementById("div").style.background="blue";
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="四、DOM-EventListener"><a href="#四、DOM-EventListener" class="headerlink" title="四、DOM EventListener"></a>四、DOM EventListener</h3><p>1、向指定元素添加事件句柄：addEventListener();</p>
+<p>2、移除添加的事件句柄：removeEventListener();</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;button id="btn"&gt;按钮&lt;/button&gt;
+&lt;script&gt;
+	var x = document.getElementById("btn");
+	// 添加句柄
+	x.addEventListener("click", hello);
+	x.addEventListener("click", world);
+	// 移出句柄
+	x.removeEventListener("click", hello);
+
+	function hello(){
+		alert("hello")
+	}
+	function world(){
+		alert("world")
+	}
+&lt;/script&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h1 id="第五章、事件详解"><a href="#第五章、事件详解" class="headerlink" title="第五章、事件详解"></a>第五章、事件详解</h1><h3 id="一、事件流"><a href="#一、事件流" class="headerlink" title="一、事件流"></a>一、事件流</h3><p>1、事件流:<br>描述的是在页面中接受事件的顺序</p>
+<p>2、事件冒泡:<br>由最具体的元素接收，然后逐级向上传播至最不具体的元素的节点(文档)</p>
+<p>3、事件捕获:<br>最不具体的节点先接收事件，而最具体的节点应该是最后接收事件</p>
+<h3 id="二、事件处理-1"><a href="#二、事件处理-1" class="headerlink" title="二、事件处理"></a>二、事件处理</h3><p>1、HTML事件处理:<br>直接添加到HTML结构中。</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;div id="div"&gt;
+	&lt;button id="btn"&gt;按钮&lt;/button&gt;
+&lt;/div&gt;
+&lt;script&gt;
+	function demo(){
+		alert("html事件处理");
+	}
+&lt;/script&gt;
+
+缺点
+修改一处，需要修改两处。
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、DOMO级事件处理<br>把一个函数赋值给一-个事件处理程序属性。</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;div id="div"&gt;
+	&lt;button id="btn"&gt;按钮&lt;/button&gt;
+&lt;/div&gt;
+&lt;script&gt;
+	var btn = document.getElementById("btn");
+	btn.onclick = function(){alert("DOM 0级事件处理程序")};
+&lt;/script&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>3、DOM2级事件处理</p>
+<pre class="line-numbers language-none"><code class="language-none">addEventListener("事件名", "事件处理函数", "布尔值");
+true:事件捕获
+false:事件冒泡
+removeEventListener();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">&lt;div id="div"&gt;
+	&lt;button id="btn"&gt;按钮&lt;/button&gt;
+&lt;/div&gt;
+&lt;script&gt;
+	var btn = document.getElementById("btn").addEventListener("click", demo)
+	function demo(){
+		alert("DOM 2级事件处理程序")
+	}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4、IE事件处理程序</p>
+<pre class="line-numbers language-none"><code class="language-none">添加事件：attachEvent
+移出事件：detachEvent<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="三、事件对象"><a href="#三、事件对象" class="headerlink" title="三、事件对象"></a>三、事件对象</h3><p>1、事件对象:<br>在触发DOM事件的时候都会产生一一个对象</p>
+<p>2、事件对象event：</p>
+<p>1)、type：获取事件类型</p>
+<p>2)、target：获取事件目标</p>
+<p>3)、stopPropagation()： 阻止事件冒泡</p>
+<p>4)、preventDefault()： 阻止事件默认行为</p>
+<h1 id="第六章、7、JavaScript内置对象"><a href="#第六章、7、JavaScript内置对象" class="headerlink" title="第六章、7、JavaScript内置对象"></a>第六章、7、JavaScript内置对象</h1><h3 id="一、对象"><a href="#一、对象" class="headerlink" title="一、对象"></a>一、对象</h3><p>1、对象简介：</p>
+<p>对象是一种数据类型，对象由属性和方法构成。</p>
+<p>JavaScript中的所有事物都是对象：字符串、数值、数组、函数… </p>
+<p>每个对象带有属性和方法，JavaScript允许自定义对象</p>
+<p>2、自定义对象：</p>
+<p>1)、 定义并创建对象实例</p>
+<p>2)、使用函数来定义对象，然后创建新的对象实例</p>
+<h3 id="二、Object对象"><a href="#二、Object对象" class="headerlink" title="二、Object对象"></a>二、Object对象</h3><h3 id="三、String字符串对象"><a href="#三、String字符串对象" class="headerlink" title="三、String字符串对象"></a>三、String字符串对象</h3><p>1、String对象：<br>String对象用于处理已有的字符串，字符串可以使用单引号或单引号。</p>
+<p>2、常用方法：</p>
+<pre class="line-numbers language-none"><code class="language-none">在字符串中查找字符串: indexOf()
+内容匹配: match()
+替换内容: replace()
+字符串大小写转换: toUpperCase() / tol owerCase()
+字符串转为数组: strong&gt;split()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="四、Date对象"><a href="#四、Date对象" class="headerlink" title="四、Date对象"></a>四、Date对象</h3><p>1、Date对象:<br>日期对象用于处理日期和时间</p>
+<p>2、获得当日的日期</p>
+<pre class="line-numbers language-none"><code class="language-none">var date = new Date();
+document.write(date);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>3、常用方法:</p>
+<pre class="line-numbers language-none"><code class="language-none">getFullYear():获取年份
+getTime():获取毫秒
+setFullYear():设置具体的日期
+getDay():获取星期
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="五、Array数组对象"><a href="#五、Array数组对象" class="headerlink" title="五、Array数组对象"></a>五、Array数组对象</h3><p>1、Array对象:<br>使用单独的变量名来存储一系列的值</p>
+<p>2、数组的创建:<br>例: var myArray=[“Hello” ,”iwen”,”ime”];</p>
+<p>3、数组的访问:<br>通过指定数组名以及索引号码，你可以访问某个特定的元素<br>注意: [0] 是数组的第一个元素。[1] 是数组的第二个元素。</p>
+<p>4、数组常用方法:</p>
+<pre class="line-numbers language-none"><code class="language-none">concat():合并数组!
+sort():排序
+push():末尾追加元素
+reverse():数组元素翻转
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="六、Math对象"><a href="#六、Math对象" class="headerlink" title="六、Math对象"></a>六、Math对象</h3><p>1、Math对象:<br>执行常见的算数任务</p>
+<p>2、常用方法:</p>
+<pre class="line-numbers language-none"><code class="language-none">round():四舍五入
+random():返回0~ 1之间的随机数
+max():返回最高值。
+min():返回中的最低值。
+abs():返回绝对值<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h1 id="第七章、Browser浏览器对象"><a href="#第七章、Browser浏览器对象" class="headerlink" title="第七章、Browser浏览器对象"></a>第七章、Browser浏览器对象</h1><p>Browser对象是由window、navigator、screen、history、location这五个对象组成，其中window是JavaScript层级中的顶层对象。window是浏览器现象、navigator是客户端浏览器对象、screen客户端显示屏对象、history是浏览器窗口访问历史对象、location是当前URL对象。</p>
+<h3 id="一、window对象"><a href="#一、window对象" class="headerlink" title="一、window对象"></a>一、window对象</h3><p>1、window对象:<br>window对象是BOM的核心，window对 象指当前的浏览器窗口<br>所有JavaScript全局对象、函数以及变量均自动成为window对象的成员<br>全局变量是window对象的属性<br>全局函数是window对象的方法<br>甚至HTML DOM的document也是window对象的属性之一</p>
+<p>2、window尺寸:</p>
+<p>window.innerHeight    浏览器窗口的内部高度</p>
+<p>window.innerWidth    浏览器窗口的内部宽度</p>
+<p>3、window方法:</p>
+<pre class="line-numbers language-none"><code class="language-none">1）打开新窗口，参数：页面，名字，打开页面的宽度和高度，打开页面的位置，工具条，菜单
+window.open("test.html", "window_name", "width=400", "height=200", "top=100", "left=100","toolbar=no", "menubar=no")
+
+2）关闭当前窗口
+window.close()
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二、计时器"><a href="#二、计时器" class="headerlink" title="二、计时器"></a>二、计时器</h3><p>1、计时事件:<br>通过使用JavaScript，我们有能力作到在一个设定的时间间隔之后来执行代码，而<br>不是在函数被调用后立即执行，我们称之为计时事件。</p>
+<p>2、计时方法:<br>1）setInterval()     -间隔指定的毫秒数不停地执行指定的代码<br>clearInterval()    方法用于停止setInterval()方法执行的函数代码</p>
+<p>2）setTimeout()     -暂停指定的毫秒数后执行指定的代码<br>clearTimeout()    方法用于停止执行setTimeout()方法的函数代码</p>
+<h3 id="三、history对象"><a href="#三、history对象" class="headerlink" title="三、history对象"></a>三、history对象</h3><p>1、History对象:<br>window.history对象包含浏览器的历史(url)的集合</p>
+<p>2、History方法:<br>history.back() -与在浏览器点击后退按钮相同<br>history.forward() -与在浏览器中点击按钮向前相同<br>history.go() -进入历史中的某个页面</p>
+<h3 id="四、Location对象"><a href="#四、Location对象" class="headerlink" title="四、Location对象"></a>四、Location对象</h3><p>1、Location对象：<br>window.location对象用于获得当前页面的地址(URL),并把浏览器重定向到新的页<br>面。</p>
+<p>2、L ocation对象的属性:</p>
+<pre class="line-numbers language-none"><code class="language-none">location.hostname	返回web主机的域名
+
+location.pathname	返回当前页面的路径和文件名
+
+location.port		返回web主机的端口
+
+location.protocol	返回所使用的web协议(http:// 或https://)
+
+location.href		属性返回当前页面的URL
+
+location.assign()	方法加载新的文档<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="五、Screen对象"><a href="#五、Screen对象" class="headerlink" title="五、Screen对象"></a>五、Screen对象</h3><p>1、Screen对象：<br>window.screen对象包含有关用户屏幕的信息</p>
+<p>2、属性:</p>
+<pre class="line-numbers language-none"><code class="language-none">screen.availWidth	-可用的屏幕宽度
+
+screen.availHeight	-可用的屏幕高度
+
+screen.Height	-屏幕高度
+
+screen.Width	-屏幕宽度<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h1 id="第八章、HTML5的新特性"><a href="#第八章、HTML5的新特性" class="headerlink" title="第八章、HTML5的新特性"></a>第八章、HTML5的新特性</h1><h3 id="一、HTML5的文档结构标签"><a href="#一、HTML5的文档结构标签" class="headerlink" title="一、HTML5的文档结构标签"></a>一、HTML5的文档结构标签</h3><pre class="line-numbers language-none"><code class="language-none">&lt;section&gt;	段落
+&lt;nav&gt;		构建导航栏
+&lt;header&gt;	页面的页眉
+&lt;footer&gt;	页面的页脚
+&lt;article&gt;	主体内容
+&lt;aside&gt;		边界内容
+&lt;hgroup&gt;	段落
+&lt;time&gt;		日期/时间
+&lt;mark&gt;		重点文字<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二、音频和视频标签"><a href="#二、音频和视频标签" class="headerlink" title="二、音频和视频标签"></a>二、音频和视频标签</h3><p>1、音频标签 <audio></audio></p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;audio src="song.mp3" controls="controls" autoplay="autoplay"&gt;
+
+属性：
+src		 音频URL
+controls 显示播放按钮
+autoplay 自动播放
+loop	 循环播放
+preload	 显示加载<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、视频标签 <video></video></p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;video src="movie.mp4" width="200" height="100" controls="controls" autoplay="autoplay"&gt;
+
+属性：
+src		视频URL
+width	视频播放器宽度
+height	视频播放器高度
+controls显示播放器控件
+autoplay自动播放
+loop	循环播放
+Spreload显示加载<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="三、绘图标签"><a href="#三、绘图标签" class="headerlink" title="三、绘图标签 "></a>三、绘图标签 <canvas></canvas></h3><h3 id="四、其他标签"><a href="#四、其他标签" class="headerlink" title="四、其他标签"></a>四、其他标签</h3><pre class="line-numbers language-none"><code class="language-none">&lt;datalist&gt;	描述细节
+
+&lt;summary&gt;	细节显示
+
+&lt;figcaption&gt;定义&lt;figure&gt;标签的标题
+
+&lt;figure&gt;	段落
+
+&lt;ruby&gt;		解释
+
+&lt;rt&gt;		分隔
+
+&lt;meter&gt;		定义度量衡
+
+&lt;command&gt;	定义命令按钮
+
+&lt;menu&gt;		定义菜单列表<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -727,7 +1489,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
+                            
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1213,7 +1983,7 @@ new Valine({
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Java是一门面向对象编程语言，不仅吸收了C++语言的各种优点，还摒弃了C++里难以理解的多继承、指针等概念，因此Java语言具有功能强大和简单易用两个特征。Java语言作为静态面向对象编程语言的代表，极好地实现了面向对象理论，允许程序员以优雅的思维方式进行复杂的编程。
                         
                     </div>
                     <div class="publish-info">
@@ -1222,11 +1992,27 @@ new Valine({
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            书生
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                    博客篇
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">编程语言</span>
+                    </a>
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1238,19 +2024,19 @@ new Valine({
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/ba003d1c.html">
+                <a href="/posts/98f3a6d9.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928021707.jpg" class="responsive-img" alt="C语言程序设计">
+                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928014929.jpg" class="responsive-img" alt="HTML5">
                         
-                        <span class="card-title">C语言程序设计</span>
+                        <span class="card-title">HTML5</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            HTML5是构建Web内容的一种语言描述方式。
                         
                     </div>
                     <div class="publish-info">
@@ -1259,11 +2045,27 @@ new Valine({
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            书生
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                    博客篇
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/HTML5/">
+                        <span class="chip bg-color">HTML5</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1501,7 +2303,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.3k</span>&nbsp;字
+                class="white-color">46.3k</span>&nbsp;字
             
             
             

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="python爬虫, 计算机 大数据 爬虫 WEB后端 数据分析">
+    <meta name="keywords" content="搜索关键字,python,爬虫">
     <meta name="description" content="IT | 计算机应用">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -616,12 +616,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%88%AC%E8%99%AB/">
+                                <span class="chip bg-color">爬虫</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                博客篇
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -639,14 +656,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    5.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    22 分
                 </div>
                 
 
@@ -664,7 +681,822 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="第一章、爬虫简介"><a href="#第一章、爬虫简介" class="headerlink" title="第一章、爬虫简介"></a>第一章、爬虫简介</h1><p>1、网络爬虫（web crawler：也叫网页蜘蛛，网络机器人，是一种用来自动浏览万维网的程序或者脚本。爬虫可以验证超链接和HTML代码，用于网络抓取（Web scraping）。网络搜索引擎等站点通过爬虫软件更新自身的网站内容（Web content）或其对其他网站的索引。</p>
+<p>2、爬虫分类：通用网络爬虫（General Purpose Web Crawler）、聚焦网络爬虫（Focused Web Crawler）、增量式网络爬虫（Incremental Web Crawler）、深层网络爬虫（Deep Web Crawler）。</p>
+<p>3、url(统一资源定位符)：<a href="http://host[:post][path]">http://host[:post][path]</a><br>http: 超文本传输协议<br>host: IP地址/域名<br>post: 端口号，默认为80<br>path: 请求资源的路径</p>
+<p>4、Robots协议</p>
+<p>(1)、爬虫的限制：<br>    来源的审查：判断User Agent等进行限制<br>    发布公告：Robots协议</p>
+<p>(2)、Robots协议：网络爬虫排除标准<br>形式：网站下的robots.txt文件<br>基本语法：* 代表所有，/代表根目录<br>user-agent: *<br>pisallow: /</p>
+<h1 id="第二章、网络请求-requests"><a href="#第二章、网络请求-requests" class="headerlink" title="第二章、网络请求 requests"></a>第二章、网络请求 requests</h1><p>环境安装：pip install requests</p>
+<h3 id="一、requests库的方法"><a href="#一、requests库的方法" class="headerlink" title="一、requests库的方法"></a>一、requests库的方法</h3><p>1、requests库的七个方法</p>
+<pre class="line-numbers language-none"><code class="language-none">requests.request(): 构造一个请求
+
+requests.get(): 发起get请求，返回response对象
+
+requests.post(): 向网页发起post请求，并向服务器传递参数
+
+requests.head(): 获取html网页头部信息
+
+requests.put(): 发起put请求
+
+requests.pach(): 向网页发起局部修改请求
+
+requests.delete(): 向网页发起删除请求<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二、requests库的get-方法"><a href="#二、requests库的get-方法" class="headerlink" title="二、requests库的get()方法"></a>二、requests库的get()方法</h3><p>3、 requests库的两个重要参数</p>
+<pre class="line-numbers language-none"><code class="language-none">request对象：向服务器请求资源
+
+response对象：爬虫返回的内容（响应数据）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>1、requests库的get()方法</p>
+<pre class="line-numbers language-none"><code class="language-none">格式：对URL发起网络请求，并返回response对象(响应数据)。
+response = request.get(url) 
+
+
+参数：request.get(url, params, kwargs)
+--url: 网页地址
+--params: url额外参数，字典或字节流格式
+--kwargs: 12个控制访问的参数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="三、requests库的post-方法"><a href="#三、requests库的post-方法" class="headerlink" title="三、requests库的post()方法"></a>三、requests库的post()方法</h3><pre class="line-numbers language-none"><code class="language-none">格式：对URL发起网络请求，并返回response对象(响应数据)。
+response = request.post(url) 
+
+参数：request.get(url, data, kwargs)
+--url: 网页地址
+--data: url额外参数，字典或字节流格式
+--kwargs: 12个控制访问的参数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="四、response对象的属性："><a href="#四、response对象的属性：" class="headerlink" title="四、response对象的属性："></a>四、response对象的属性：</h3><pre class="line-numbers language-none"><code class="language-none">response.text: http响应数据的字符串形式，即url页面的内容
+
+response.content: http响应数据的二进制形式
+
+response.status_code：http请求返回的状态，200表示成功。
+
+response.encoding：从http的头部猜测响应数据的编码形式
+
+response.apparent_encoding: 从内容中分析响应数据的编码形式
+
+response.cookies：获取RequestsCookieJar对象
+&lt;RequestsCookieJar[&lt;Cookie bid=uk68MyRriZ8 for .douban.com/&gt;]&gt;
+
+response.headers：获取头部数据
+
+response.reason：返回状态信息
+
+response.url：返回请求的URL
+
+response.raw：获取原始数据
+&lt;urllib3.response.HTTPResponse object at 0x00000234271FC820&gt;
+
+response.json：序列化为JSON格式数据
+&lt;bound method Response.json of &lt;Response [200]&gt;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="六、处理Requests重定向"><a href="#六、处理Requests重定向" class="headerlink" title="六、处理Requests重定向"></a>六、处理Requests重定向</h3><pre class="line-numbers language-none"><code class="language-none">在网络请求时添加：禁止重定向
+allow_redirects=False<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="七、Requests-SSL证书验证"><a href="#七、Requests-SSL证书验证" class="headerlink" title="七、Requests SSL证书验证"></a>七、Requests SSL证书验证</h3><pre class="line-numbers language-none"><code class="language-none">1、忽视证书
+import requests
+from requests.packages import urllib3
+
+urllib3.disable_warnings()
+resp = requests.get("https://12306.cn", verify=False)
+print(resp.status_code)
+
+2、设置本地证书
+import requests
+from requests.packages import urllib3
+
+urllib3.disable_warnings()
+resp = requests.get("https://12306.cn", cert=("**.crt", "**key"))
+print(resp.status_code)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="八、网络请求的编码流程："><a href="#八、网络请求的编码流程：" class="headerlink" title="八、网络请求的编码流程："></a>八、网络请求的编码流程：</h3><pre class="line-numbers language-none"><code class="language-none">1. 指定url(网址)
+url = "http://baidu.com"
+
+2. UA伪装，将爬虫的身份标识，伪装成浏览器的请求头(headers)的请求载体的身份标识，可以躲过UA检测。
+headers = {
+	"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)";
+}
+
+3. 处理get/post请求的参数(params/data)
+params = {
+    "bs": "爬虫";
+}
+
+4. 发起get/post请求，并返回一response对象
+response = request.get(url) 
+
+5. 获取响应数据，会返回text(字符串)/json(对象)/content(二进制)格式的数据
+data = response.text
+
+6. 存储数据
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 id="第三章、数据解析"><a href="#第三章、数据解析" class="headerlink" title="第三章、数据解析"></a>第三章、数据解析</h1><h3 id="一、数据解析简介"><a href="#一、数据解析简介" class="headerlink" title="一、数据解析简介"></a>一、数据解析简介</h3><p>一）解析模块</p>
+<pre class="line-numbers language-none"><code class="language-none">1、BeautifulSoup
+2、re
+3、Xpath
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>二）数据解析原理：<br>    1、解析的局部的文本内容都会在标签之间或标签属性之中<br>    2、进行指定标签的定位<br>    3、对标签或标签属性之间的数据进行提取(解析)</p>
+<p>三）数据解析的编码流程：</p>
+<pre class="line-numbers language-none"><code class="language-none">1. 指定url(网址)
+
+2. UA伪装，将爬虫的身份标识，伪装成浏览器的请求头(headers)的请求载体的身份标识，可以躲过UA检测。
+
+3. 处理get/post请求的参数(params/data)
+
+4. 发起get/post请求，并返回一response对象
+
+5. 获取响应数据，会返回text/json格式的数据
+
+6. 数据解析(BeautifulSoup/re/xpath),提取局部所需数据
+
+7. 存储数据(txt/csv/jpg/json)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二、re-正则表达式"><a href="#二、re-正则表达式" class="headerlink" title="二、re(正则表达式)"></a>二、re(正则表达式)</h3><pre class="line-numbers language-none"><code class="language-none">import re
+(.*?)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="三、BeautifulSoup"><a href="#三、BeautifulSoup" class="headerlink" title="三、BeautifulSoup"></a>三、BeautifulSoup</h3><p>1、BeautifulSoup进行数据解析原理：</p>
+<pre class="line-numbers language-none"><code class="language-none">1）实例化一个BeautifulSoup对象，并将网页源码数据加载到该对象中
+soup = BeautifulSoup(html, 'lxml')
+
+2）通过调用BeautifulSoup对象中的方法(属性)，进行标签定位和数据提取
+title = soup.find_all('span', class_='title')
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、BeautifulSoup对象的实例化：</p>
+<pre class="line-numbers language-none"><code class="language-none">1). 将本地的html文档中数据加载到该对象中
+with open('./哔哩哔哩.html','r',encoding='utf-8') as fp:
+	soup = BeautifulSoup(fp,'lxml')
+    			
+2). 将互联网上的网页源码加载到该对象中
+response_text = response.text
+	soup = BeautifulSoup(response,'lxml')
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3、提供的用于数据解析的方法和属性：</p>
+<pre class="line-numbers language-none"><code class="language-none">(1)标签定位：
+soup.标签名
+# 返回soup对象中第一次出现的标签名对应的标签
+soup.find:
+# 返回soup对象中第一次出现的标签名对应的标签
+soup.find('标签名')
+
+
+(2)属性定位：
+# 返回soup对象中第一次出现的标签名和属性名所对应的标签
+soup.find('标签'，'属性名')		
+# 返回soup对象中所有出现过的标签名和属性名所对应的标签，是列表类型
+soup.findall('标签名'，'属性名')
+
+
+(3)select(选择器)：
+soup.select(''标签名(div，)' / '.类名(class，)' / '#id名(#id)'，....选择器)')	
+# select()返回的是一个列表,(.表示的类选择器)
+组合查找：soup.select('div  .类名')		# 通过标签和class组合查找，使用空格连接不同方式
+		soup.select('div  #id名')		# 通过标签和id组合查找，使用空格连接不同方式	
+		soup.select('a[属性="属性名"]')	 # 通过标签的属性查找，标签和属性必须在同一个节点内。
+层级选择器：
+	soup.select('. &gt; ul &gt; li &gt; a')	# .可以是标签/类/id，&gt;表示的是一个层级
+	soup.selsct('. &gt; ul a')			# ul标签和a标签之间有空格，空格表示的是多个层级
+
+
+(4)获取标签之间的文本数据：
+soup.标签名.text/.string/.get_text()
+区别：
+text和.get_text()，可以获取一个标签中所有的文本内容
+.string，只可以获取该标签下面直系的文本内容
+
+
+(5)获取标签中的属性值：
+soup.标签名['属性名']
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="四、xpath"><a href="#四、xpath" class="headerlink" title="四、xpath"></a>四、xpath</h3><p>1、xpath解析原理;</p>
+<pre class="line-numbers language-none"><code class="language-none">（1）.实例化一个etree的对象，且将需要解析的网页源码加载到该对象中
+（2）.调用etree对象中的xpath方法，并结合xpath表达式，实现标签的定位和内容的提取
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>2、etree对象的实例化：from lxml import etree</p>
+<pre class="line-numbers language-none"><code class="language-none">(1). 将本地的html文档中的源码加载到etree对象中
+etree.parse(file_path)
+	
+(2). 将互联网上的网页源码加载到etree对象中
+etr = etree.HTML('response_text')
+data = etr.xpath('xpsth表达式')
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3、xpath表达式：(可以直接copy xpath)</p>
+<pre class="line-numbers language-none"><code class="language-none">1）/表示一个层级，最左边的/表示的是从根节点开始定位	
+  ./表示当前标签
+
+
+2）//表示多个层级，最左边的//表示的是从任意位置开始定位
+
+
+3）属性定位：//标签名[@属性名='属性值']		
+例如：，返回的是一个列表
+//div[@class='class_value']
+
+
+4）索引定位：
+//标签名[@属性名='属性值']/标签名[1]	
+例如：索引从1开始，
+//div[@class='class_value']/p[1]
+
+
+5）提取文本：
+提取直系的文本内容：/text()					
+例如：
+//div[@class='class_value']/p[1]/text()
+
+提取非直系的文本内容(所有的文本内容)：//text()
+例如：
+//div[@class='class_value']/p[1]//text()
+
+
+6）提取属性：/@属性名				
+例如：提取a标签的href属性
+//div[@class='class_value']/a/@href
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h1 id="第四章、模拟登录"><a href="#第四章、模拟登录" class="headerlink" title="第四章、模拟登录"></a>第四章、模拟登录</h1><h3 id="一、模拟登录简介"><a href="#一、模拟登录简介" class="headerlink" title="一、模拟登录简介"></a>一、模拟登录简介</h3><p>1、验证码识别：识别验证码图片中的数据，用于模拟登录操作<br>    （1）识别验证码的操作：人工识别/第三方自动识别<br>    （2）验证码：每次请求都会发生变化<br>2、模拟登录：<br>    爬取基于某些用户的用户信息<br>    登录流程：获取验证码 &gt; 点击登录后，会发起post请求 &gt; post请求中会携带登录信息<br>    (1). 编码流程：获取验证码 &gt; 发起post请求(处理相关参数)  &gt; 数据存储</p>
+<h3 id="二、模拟登录的编码流程："><a href="#二、模拟登录的编码流程：" class="headerlink" title="二、模拟登录的编码流程："></a>二、模拟登录的编码流程：</h3><p>1、</p>
+<p>需求：对人人网进行模拟登录</p>
+<pre class="line-numbers language-none"><code class="language-none">1.获取验证码
+(1). 指定url(网址)
+
+(2). UA伪装，将爬虫的身份标识，伪装成浏览器的请求头(headers)的请求载体的身份标识，可以躲过UA检测。
+
+(4). 发起get请求，并返回response对象
+
+(5). 获取响应数据，会返回text格式的数据
+
+(6). 数据解析(BeautifulSoup/re/xpath),提取验证码图片
+
+(7). 使用打码平台，识别验证码图片，并返回验证码
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、模拟登录的编码流程：<br>需求：爬取登录后的个人主页中显示的用户信息</p>
+<pre class="line-numbers language-none"><code class="language-none">1.获取验证码
+指定url(网址)
+
+UA伪装，将爬虫的身份标识，伪装成浏览器的请求头(headers)的请求载体的身份标识，可以躲过UA检测。
+
+发起get请求，并返回一response对象
+
+获取响应数据，会返回text格式的数据
+
+数据解析(BeautifulSoup/re/xpath),提取验证码图片
+
+使用打码平台，识别验证码图片，并返回验证码
+
+
+2.模拟登录
+创建session对象
+
+使用session携带cookie进行发送post请求
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="三、cookie和session"><a href="#三、cookie和session" class="headerlink" title="三、cookie和session"></a>三、cookie和session</h3><p>1、http/https协议的特性：无状态<br>没有请求到对应页面的原因：<br>发起的第二次基于个人主页页面请求的时候，服务器不知道该请求是登录状态下的请求。</p>
+<p>2、cookie： 用来让服务器端记录客户端的相关状态</p>
+<pre class="line-numbers language-none"><code class="language-none">cookie操作：
+1）手动处理：通过抓包工具获取cookie值，并将该值封装进headers中。
+2）自动处理：session
+3）cookie值的来源：模拟登录post请求后，由服务器端创建。
+	
+session会话对象：
+1）session对象的作用：
+	--可以进行请求的发送。
+	--如果请求过程中产生了cookie，则该cookie值会被自动储存在session对象中。
+	
+2）创建一个session对象：session = requests.Session( )
+
+3）使用session对象进行模拟登录post请求的发送（cookie值就会被存储在session中）
+
+4）session对象对个人主页对应的get请求进行发送（携带了cookie）
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
+<h1 id="第五章、代理IP"><a href="#第五章、代理IP" class="headerlink" title="第五章、代理IP"></a>第五章、代理IP</h1><h3 id="一、代理IP简介"><a href="#一、代理IP简介" class="headerlink" title="一、代理IP简介"></a>一、代理IP简介</h3><p>1、代理服务器:  网络信息中的一个中转站。</p>
+<p>2、代理服务器的作用：<br>    –突破自身IP的访问限制<br>    –隐藏自身的IP，免受攻击</p>
+<p>3、代理IP的类型:<br>    –http: 只能应用到http协议对应的url中<br>    –https: 只能应用到https协议对应的url中</p>
+<p>4、代理IP的匿名度：<br>    –透明：服务器知道该次请求使用了代理，也知道请求对应的真实的IP<br>    –匿名：服务器知道使用了代理，不知道真实的IP<br>    –高匿：服务器不知道使用了代理，更不知到真实的IP</p>
+<p>5、IP代理的相关网站<br>    –快代理<br>    –西祠代理<br>    –<a target="_blank" rel="noopener" href="http://www.goubanjia.com/">www.goubanjia.com</a></p>
+<h3 id="二、反爬机制：IP封禁"><a href="#二、反爬机制：IP封禁" class="headerlink" title="二、反爬机制：IP封禁"></a>二、反爬机制：IP封禁</h3><pre class="line-numbers language-none"><code class="language-none">proxies = {
+    'https': '49.70.32.63:9999'
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
+<h1 id="第六章、协程-amp-ayncio-异步非阻塞"><a href="#第六章、协程-amp-ayncio-异步非阻塞" class="headerlink" title="第六章、协程&amp;ayncio(异步非阻塞)"></a>第六章、协程&amp;ayncio(异步非阻塞)</h1><h3 id="一、协程简介"><a href="#一、协程简介" class="headerlink" title="一、协程简介"></a>一、协程简介</h3><p>1、协程: 微线程，通过一个线程让代码之间相互切换的执行。<br>2、实现协程的方式：</p>
+<pre class="line-numbers language-none"><code class="language-none">greenlet (早期模块)
+yield关键字
+asyncio装饰器
+async -await关键字（主流）
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3、协程的意义：<br>如果一个线程中遇到IO阻塞，线程会利用等待时间，去执行其他任务。类似于时间统筹规划。</p>
+<h3 id="二、基于协程的异步编程"><a href="#二、基于协程的异步编程" class="headerlink" title="二、基于协程的异步编程"></a>二、基于协程的异步编程</h3><p>1、 事件循环(死循环)</p>
+<pre><code>例: 任务列表 = [任务1，任务2.......]
+
+while True:
+    可执行的任务列表，已完成的任务列表 = 去任务列表中检查所有任务，将'可执行'和'已完成'的任务返回
+
+for 就绪任务 in 已准备就绪的任务列表：
+    执行已就绪的任务
+
+for 已完成的任务 in 已完成的任务列表：
+    在任务列表中移除已完成的任务
+如果任务列表中的任务全部完成，则终止循环</code></pre>
+<p>2、 协程函数，定义函数时&gt;&gt;&gt; async def 函数名</p>
+<pre class="line-numbers language-none"><code class="language-none">async def fun():
+    pass
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>3、await<br>await + 可等待对象(协程对象，Task对象，Future &gt;&gt;&gt; IO等待)<br>await就是等待对象的值，得到值以后才会往下走。</p>
+<p>4、协程对象，执行协程函数()，得到的协程对象,但函数内部的代码不会执行</p>
+<pre class="line-numbers language-none"><code class="language-none">result = fun()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>5、运行协程函数: 需要将协程对象交给事件循环处理</p>
+<pre class="line-numbers language-none"><code class="language-none">asyncio.run(result)
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>6、task对象<br>task用于并发的调度协程，帮助我们将多个任务添加到事件循环中。</p>
+<pre class="line-numbers language-none"><code class="language-none">tasks对象的创建：
+asyncio.create_task(协程对象)
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>7、Future对象<br>task继承Future，task对象内部await结果的处理基于Future对象来的。<br>是基于协程实现异步操作时用到的对象。</p>
+<p>扩展：concurrent.futures.Future对象<br>是基于线程池/进程池实现异步操作时用到的对象</p>
+<p>8、asyncio异步迭代器</p>
+<p>9、 异步上下文管理器</p>
+<p>10、 uvioop<br>uvioop是asyncio的事件循环的替代方案</p>
+<pre class="line-numbers language-none"><code class="language-none">import asyncio, uvioop
+
+asyncio.set_event_loop_policy(uvloop.Eventlooppolicy())
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h1 id="第七章、异步爬虫"><a href="#第七章、异步爬虫" class="headerlink" title="第七章、异步爬虫"></a>第七章、异步爬虫</h1><p>一、</p>
+<p>异步爬虫：爬虫并行的访问url，实现高效的数据爬取<br>1、异步爬虫的方式:</p>
+<pre class="line-numbers language-none"><code class="language-none">--多线程，多进程：
+	优点：可以为相关阻塞的操作，单独开启线程或进程，阻塞操作就可以异步执行。
+	缺点：无法无限制的开启多线程或者多进程。
+
+--线程池，进程池：
+	优点：可以降低系统对线程/进程创建和销毁的频率，从而降低系统的开销。
+	缺点：池中的线程/进程的数量有上限。
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、单线程 + 异步协程</p>
+<pre class="line-numbers language-none"><code class="language-none">event_oop:事件循环，相当于一个无限循环， 我们可以把一些函数注册 到这个事件循环上，
+	当满足某些条件的时候，函数就会被循环执行。
+
+coroutine:协程对象，我们可以将协程对象注册到事件循环中，它会被事件循环调用。
+	我们可以使用async 关键字来定义一个方法，这个方法在调用时不会立即被执行，而是返回一个协程对象。
+
+task: 任务，它是对协程对象的进一步封装，包含了任务的各个状态。
+
+future: 代表将来执行或还没有执行的任务，实际上和task 没有本质区别。
+
+async: 定义一个协程。
+
+await: 用来挂起阻塞方法的执行。
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3、 多任务协程</p>
+<p>使用aiohttp模块中基于ClientSession类的Session对象,进行网络请求的发送</p>
+<p>1.创建协程函数</p>
+<p>2.创建session对象</p>
+<p>3.进行网络请求，并获取响应数据</p>
+<pre><code>发起网络请求：
+get()/post()
+封装参数:
+headers,params/data,proxy='http//ip:port'
+
+使用await，对asyncio中的阻塞操作进行手动挂起
+    text()返回的是字符串形式的响应数据
+    read()返回的是二进制形式的响应数据
+    json()返回的是json对象
+    注意：获取响应数据之前一定要使用await进行手动挂起
+    在异步网页请求中，只要遇到要等待的代码就需要手动挂起</code></pre>
+<p>4.创建任务列表</p>
+<p>5.调用协程函数()，并返回一个的协程对象,但函数内部的代码不会执行</p>
+<p>6.创建一个future对象</p>
+<p>7.将任务对象添加到任务列表中</p>
+<p>8.创建一个事件循环对象</p>
+<p>9.将存放多个任务对象的任务列表封装到wait中，并注册到loop中，并启动loop</p>
+<h1 id="第八章、selsnium模块"><a href="#第八章、selsnium模块" class="headerlink" title="第八章、selsnium模块"></a>第八章、selsnium模块</h1><h3 id="一、selenium简介"><a href="#一、selenium简介" class="headerlink" title="一、selenium简介"></a>一、selenium简介</h3><p>1、selenium模块的概念：<br>基于浏览器自动化的一个模块</p>
+<p>2、selenium模块的作用：<br>能更便捷的获取网站中动态加载的数据，能更便捷的实现模拟登录</p>
+<p>3、selenium模块的使用流程：</p>
+<pre class="line-numbers language-none"><code class="language-none">实例化一浏览器对象
+
+编写基于浏览器自动化的操作代码
+
+发起请求：get(url)
+
+标签定位：find系列的方法
+
+标签交互：send_keys('xxx')
+
+执行js程序：excute_script('jsCode')
+
+前进：forward()
+后退：back()
+点击：click()
+
+关闭浏览器：close()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二、selenium基本操作"><a href="#二、selenium基本操作" class="headerlink" title="二、selenium基本操作"></a>二、selenium基本操作</h3><p>1、使用webdriver调用浏览器驱动器</p>
+<pre class="line-numbers language-none"><code class="language-none">from selenium import webdriver
+
+driver = webdriver.Firefox(executable_path=r'D:\pycharm\pythongeckodriver\geckodriver.exe')
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、获取请求网页</p>
+<pre class="line-numbers language-none"><code class="language-none">driver.get(url)
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>3、返回网页加载出来的html</p>
+<pre class="line-numbers language-none"><code class="language-none">html = driver.page_source
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>4、关闭浏览器</p>
+<pre class="line-numbers language-none"><code class="language-none">driver.close()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>5、设置隐式窗口</p>
+<pre class="line-numbers language-none"><code class="language-none">from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+
+隐藏窗口
+Options = Options()
+Options.add_argument('--headless')
+
+使用webdriver调用浏览器，
+driver =webdriver.Firefox(options=Options, executable_path=r'D:\geckodriver.exe')
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="三、selenium常用函数"><a href="#三、selenium常用函数" class="headerlink" title="三、selenium常用函数"></a>三、selenium常用函数</h3><p>1、定位元素</p>
+<pre class="line-numbers language-none"><code class="language-none">1）
+根据class定位
+element = driver.find_element_by_class_name('要定位的标签')
+根据css定位
+element = driver.find_element_by_css_selector('要定位的标签')
+根据id定位
+element = driver.find_element_by_id('要定位的标签')
+根据链接的文本定位
+element = driver.find_element_by_link_text('要定位的标签')
+根据节点名定位
+element = driver.find_element_by_name('要定位的标签')
+根据根据链接的文本定位
+element = driver.find_element_by_partial_link_text('要定位的标签')
+根据tag定位
+element = driver.find_element_by_tag_name('要定位的标签')
+根据xpath定位
+element = driver.find_element_by_xpath('要定位的节点')
+
+2）
+将element改为elements会定位所有符合条件的元素，返回一个列表。
+例如: eb会返回一个WebElement对象
+element = driver.find_elements_by_class_name('要定位的标签')
+
+3）
+提取WebElement对象的信息
+获取属性：element.get_attribute()
+获取文本：element.text
+获取标签名：element.tag_name
+获取节点id：element.id
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>2、鼠标动作</p>
+<pre class="line-numbers language-none"><code class="language-none">from selenium.webdriver import ActionChains
+
+# 实例化一个动作链对象
+action = ActionChains(driver=driver)
+
+# 单击某个节点
+action.click(on_element=element1)
+
+# 单击某个节点，并按住不放
+action.click_and_hold(on_element=element1)
+
+# 右键单击某个节点
+action.context_click(on_element=element1)
+
+# 双击某个节点
+action.double_click(on_element=element1)
+
+# 将某个节点拖拽到另一个节点上
+action.drag_and_drop(source=element1, target=element2)
+
+# 按住某个节点，沿着X轴和Y轴方向拖拽特定距离
+action.drag_and_drop_by_offset(source=element1, xoffset=10, yoffset=20)
+
+# 按下特殊键：Ctrl、Alt、Shift
+action.key_down(value="Ctrl", element=element1)
+
+# 释放特殊键
+action.key_up()
+
+# 鼠标从当前位置移动到某个坐标
+action.move_by_offset(xoffset=10, yoffset=10)
+
+# 鼠标移动到某个元素
+action.move_to_element(to_element=element1)
+
+# 移动到距某个元素（左上角坐标）多少距离的位置action.move_to_element_with_offset(to_element=element1, xoffset=10, yoffset=10)
+
+# 执行链中的所有动作
+action.perform()
+
+# 在某个元素位置松开鼠标左键
+action.release(on_element=None)
+
+# 发送某个键到当前焦点的元素
+action.send_keys(keys_to_send=)
+
+# 发送某个键到指定元素
+action.send_keys_to_element(element=element1, keys_to_send=)
+
+# 重置操作
+action.reset_actions()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>3、弹窗</p>
+<pre class="line-numbers language-none"><code class="language-none">实例化弹窗对象
+alert = driver.switch_to_alert()
+
+确定
+alert.accept()
+关闭对话框
+alert.dismiss()
+传入值
+alert.send_keys()
+获得对话框
+alert.text()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>4、页面的前进、后退、切换</p>
+<pre class="line-numbers language-none"><code class="language-none">打开页面
+driver.get('https://www.baidu.com')
+
+# 页面回退
+driver.back()
+
+# 页面前进
+driver.forward()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>5、页面截图</p>
+<pre class="line-numbers language-none"><code class="language-none">driver.save_screenshot("截图.png")
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<p>6、页面等待</p>
+<pre class="line-numbers language-none"><code class="language-none">from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+
+driver=webdriver.Firefox(executable_path=r'D:\pycharm\pythongeckodriver\geckodriver.exe')
+element = WebDriverWait(driver,10)
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>7、执行JS语句</p>
+<pre class="line-numbers language-none"><code class="language-none">driver.execute_script(js语句)
+
+1）滚动到底部
+js = document.body.scrollTop=10000
+driver.execute_script(js)
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>8、Cookies操作</p>
+<pre class="line-numbers language-none"><code class="language-none">获取Cookices
+driver.get_cookies()
+
+增加Cookices
+driver.add_cookice({"Cookie": "sid=***"})
+
+删除Cookices
+driver.delete_cookie()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<p>9、selenium处理iframe + 动作链<br>1）如果定位的标签在iframe中，需要先切换浏览器的作用域：driver.switch_to.frame(‘iframe标签，id’)<br>2）动作链（拖动）：</p>
+<pre class="line-numbers language-none"><code class="language-none">导入模块：
+from selenium.webdriver import ActionChains
+
+实例化一个动作链对象：
+action = ActionChains(driver)
+
+点击且长按指定的标签：
+action.click_and_hold('div')
+
+拖动标签：x是水平方向，y是竖直方向
+.move_by_offset(x,y)
+
+立即执行动作链：
+perform()
+
+释放动作链：
+action.release()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>三、selenium的静态浏览器和规避检测</p>
+<pre class="line-numbers language-none"><code class="language-none">2、实现隐藏窗口,(静态浏览器，无可视化界面)
+导入Options库
+from selenium.webdriver.firefox.options import Options
+
+实现规避检测
+from selenium.webdriver import ChromeOptions
+
+实例化Options,实现隐藏窗口,(静态浏览器，无可视化界面)
+firefox_options = Options()
+firefox_options.add_argument('--headless')
+firefox_options.add_argument('--disable-gpu')
+
+实例化ChromeOptions,实现规避检测
+option = ChromeOptions()
+option.add_experimental_option('excludeSwitches',['enable-automation'])
+
+实例化一个浏览器对象，用webdriver调用浏览器，并导入驱动程序路径,实现隐藏窗口,实现规避检测.
+driver = webdriver.Firefox(executable_path=r'D:\pycharm\python_geckodriver\geckodriver.exe',options=option,firefox_options=firefox_options)
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h1 id="第九章、抓包"><a href="#第九章、抓包" class="headerlink" title="第九章、抓包"></a>第九章、抓包</h1><h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><p>1、抓包：通过浏览器抓取动态页面返回的数据包。</p>
+<p>2、流程：</p>
+<p>打开浏览器搜索信息，单击右键，选择检查，点击网络，在网络中找到传输到动态页面的数据包，复制URL、请求头数据、响应数据。对着URL进行网络请求，并将请求头数据添加到headers中，将响应数据添加到params/data中。</p>
+<h3 id="二、获取简书动态页面的标题"><a href="#二、获取简书动态页面的标题" class="headerlink" title="二、获取简书动态页面的标题"></a>二、获取简书动态页面的标题</h3><p>第一步：先获取json数据包的URL，请求头数据，响应数据</p>
+<p>第二步：导入库</p>
+<pre class="line-numbers language-none"><code class="language-none">import requests
+import json
+import re
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>第三步：URL、请求头、携带参数</p>
+<p>url = “<a target="_blank" rel="noopener" href="https://www.jianshu.com/c/V2CqjW?order_by=added_at&amp;page=1&quot;">https://www.jianshu.com/c/V2CqjW?order_by=added_at&amp;page=1"</a></p>
+<pre class="line-numbers language-none"><code class="language-none">请求头：
+headers = {
+"Accept": "text/html, */*; q=0.01",    
+"Accept-Encoding": "gzip, deflate, br",    
+"Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",    
+"Connection": "keep-alive",    
+"Cookie": "_ga=GA1.2.1967223958.1615384892; __yadk_uid=xzfkyB9xewiiKaJbp24ZqzC3VhN6UUhJ; efault_font=font2;Hm_lvt_0c0e9d9b1e7d617b3e6842e85b9fb068=1622858975,1623502154,1624174201,1624620785; Hm_lpvt_0c0e9d9b1e7d617b3e6842e85b9fb068=1624620797",    
+"Host": "www.jianshu.com",    
+"Referer": webpath1,    
+"sec-ch-ua": '" Not;A Brand";v="99", "Microsoft Edge";v="91", "Chromium";v="91"',    "sec-ch-ua-mobile": "?0",    
+"Sec-Fetch-Dest": "empty",    
+"Sec-Fetch-Mode": "cors",    
+"Sec-Fetch-Site": "same-origin",    
+"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) 4.59",    
+"X-CSRF-Token": "LuQ/84M8/68ZYCRrUYU84GzDWMqk8YCgvq0w/9Res1iIbzFO8ObDQw==",    
+"X-INFINITESCROLL": "true",    
+"X-Requested-With": "XMLHttpRequest",
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">携带参数：
+params = {    
+	"order_by": "added_at",    
+	"page": 1,
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>第四步、向URL发起网络请求，获取页面数据，将其转换成二进制形式，并忽略乱码。</p>
+<pre class="line-numbers language-none"><code class="language-none">response = requests.get(
+	url=url, 
+	headers=headers,
+	params=json.dumps(params),
+).content.decode('utf-8','ignore')
+
+参数：
+将字典类型的参数转换成json格式：json.dumps(params)
+将响应数据转换成二进制形式：.content
+忽视二进制乱码：.decode('utf-8','ignore')
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>第五步：使用正则，提取response对象中的标题</p>
+<pre class="line-numbers language-none"><code class="language-none">title = re.findall('&lt;div class="content"&gt;[\s\S]+?&lt;a class="title" target="_blank" href=".*?"&gt;(.*?)&lt;/a&gt;[\s\S]+?&lt;p class="abstract"&gt;', response, re.S)
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>第六步：将数据存储</p>
+<pre class="line-numbers language-none"><code class="language-none">with open(file_path, "a", encoding="utf8") as fp:
+	fp.write(title + "/n")
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -727,7 +1559,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%88%AC%E8%99%AB/">
+                                    <span class="chip bg-color">爬虫</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1222,11 +2062,23 @@ new Valine({
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            书生
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                    博客篇
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">
+                        <span class="chip bg-color">计算机</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1250,7 +2102,7 @@ new Valine({
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Python提供了高效的高级数据结构，还能简单有效地面向对象编程。Python语法和动态类型，以及解释型语言的本质，使它成为多数平台上写脚本和快速开发应用的编程语言。
                         
                     </div>
                     <div class="publish-info">
@@ -1259,11 +2111,27 @@ new Valine({
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            书生
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                    博客篇
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">编程语言</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1501,7 +2369,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.3k</span>&nbsp;字
+                class="white-color">46.3k</span>&nbsp;字
             
             
             

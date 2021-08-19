@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CSS, 计算机 大数据 爬虫 WEB后端 数据分析">
+    <meta name="keywords" content="CSS,前端">
     <meta name="description" content="IT | 计算机应用">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -616,12 +616,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                            <a href="/tags/CSS/">
+                                <span class="chip bg-color">CSS</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                博客篇
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -639,14 +656,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    4.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    21 分
                 </div>
                 
 
@@ -664,7 +681,1173 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="第一章、"><a href="#第一章、" class="headerlink" title="第一章、"></a>第一章、</h1><h3 id="一、CSS规范"><a href="#一、CSS规范" class="headerlink" title="一、CSS规范"></a>一、CSS规范</h3><p>CSS主要有两个部分构成：选择器和声明。选择器是用于指定HTML标签，花括号是设置该对象的具体样式。</p>
+<p>1、CSS三大特性：</p>
+<pre class="line-numbers language-none"><code class="language-none">（1）层叠性
+一个标签由多个选择器。当相同选择器设置了相同样式，那么后一个样式会覆盖前一个样式。
+
+（2）继承性
+子标签会继承父标签的样式。
+
+（3）优先级
+当一个标签多个选择器，当选择器相同，后面的样式会覆盖掉前面的样式。当选择器不相同则会比较权重。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>2、元素显示模式</p>
+<pre class="line-numbers language-none"><code class="language-none">块级标签：一行只能放一个，可以设置宽高，标签内可以包含任何标签。
+行内标签：一行可以放多个，不可以设置宽高，标签内只能包含文本或其他行内标签。
+行内块级标签：一行放多个行内元素，可以设置宽高。
+
+将行元素转化成块元素：display: block;
+将块元素转化成行元素：display: inline;
+将元素转换成行内块元素：display: inline-block;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二、CSS的引入方式"><a href="#二、CSS的引入方式" class="headerlink" title="二、CSS的引入方式"></a>二、CSS的引入方式</h3><pre class="line-numbers language-none"><code class="language-none">1、标签：
+	&lt;style&gt;：样式定义
+	&lt;link&gt;：样式引用
+	
+2、属性：
+	rel="stylesheet"	外部样式表
+	type="text/cass"	引入样式的类型
+	margin-left			边距
+
+3、三种样式表插入方法：
+外部样式表：&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
+
+内部样式：
+&lt;style type="text/css"&gt;
+	body {background-color.red}
+	p{margin-left:20px}
+&lt;/style&gt;
+
+内联样式表：
+&lt;p style="color:red"&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二、CSS选择器"><a href="#二、CSS选择器" class="headerlink" title="二、CSS选择器"></a>二、CSS选择器</h3><p>1、标签选择器：写上标签名</p>
+<pre class="line-numbers language-none"><code class="language-none">1）、定义，指定样式的标签名，统一的为标签设置样式。
+p {
+	color: red;
+}
+
+2）分组
+h1 h2 h3 h4 h5 h6 {
+	color: red;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、类选择器：样式 . 定义，结构class调用。</p>
+<pre class="line-numbers language-none"><code class="language-none">1）、定义
+.red {
+	color: red;
+}
+.size {
+	width: 10px
+	height: 10px;
+}
+
+2）、调用
+&lt;h1 class="red"&gt;啊哈哈哈哈哈&lt;/h1&gt;
+
+3）多类
+多类名：一个标签中放多个类样式，每个样式用空格隔开，当类样式有内容重复，后面的会覆盖掉前面的样式。
+&lt;h1 class="red size"&gt;啊哈哈哈哈哈&lt;/h1&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3、id选择器：样式#定义，结构id调用。</p>
+<pre class="line-numbers language-none"><code class="language-none">1）、定义
+#blue {
+	color: blue;
+}
+
+2）、调用
+&lt;div id=blue&gt;蓝色&lt;/div&gt;
+
+只能调用一次<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4、通配符选择器：样式*定义，自动调用</p>
+<pre class="line-numbers language-none"><code class="language-none">* {
+	margin: 0;
+	padding: 0;
+}
+
+自动给所有的标签附上样式<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>5、属性选择器</p>
+<pre class="line-numbers language-none"><code class="language-none">定义属性选择器
+[title]{
+	color: blue;
+}
+定义属性和值选择器
+[title="t1"]{
+	color: blue;
+}
+
+调用
+&lt;p title=""&gt;属性选择器&lt;/p&gt;
+&lt;p title="t1"&gt;属性和值选择器&lt;/p&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>6、后代选择器</p>
+<pre class="line-numbers language-none"><code class="language-none">HTML结构：
+&lt;p&gt;从明天起，做一个&lt;string&gt;幸福的人&lt;/string&gt;，喂马，劈柴，周游世界&lt;/p&gt;
+
+CSS样式：
+p string{
+	color: red;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>7、子元素选择器</p>
+<pre class="line-numbers language-none"><code class="language-none">HTML结构：
+&lt;ul&gt;
+	&lt;li&gt;&lt;li&gt;
+&lt;/ul&gt;
+
+CSS样式：
+ul &gt; li {
+	color: red;
+}
+
+使用&gt;分隔，只能选择子元素。
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>8、伪类选择器</p>
+<pre class="line-numbers language-none"><code class="language-none">链接样式：
+a:link		普通的、未被访问的链接
+a:visited	用户以访问的链接
+a:hover		鼠标指针位于链接上方
+a:active	链接被点击的时刻
+
+
+光标样式 focus
+input:focus {
+	background-color: yellow;
+	color: red;
+}
+
+使用:分隔，
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h1 id="第二章、CSS样式"><a href="#第二章、CSS样式" class="headerlink" title="第二章、CSS样式"></a>第二章、CSS样式</h1><h3 id="一、背景样式"><a href="#一、背景样式" class="headerlink" title="一、背景样式"></a>一、背景样式</h3><p>1、 设置元素的背景颜色<br>background-color</p>
+<pre class="line-numbers language-none"><code class="language-none">定义背景颜色
+body {
+    background-color: aqua;
+}
+
+设置标签背景的背景颜色
+.back-color {
+    background-color: blueviolet;
+    width: 30px;
+    padding: 30px;
+}
+
+设置背景颜色半透明：
+background: grba(0,0,0,0.5);
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、将图片设置为背景<br>background-image</p>
+<pre class="line-numbers language-none"><code class="language-none">body {
+    background-image: url(../img/bg1.jpg);
+}
+
+# 给标签添加图片
+.div-bg {
+    background-image: url(../img/bg1.jpg);
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3、背景图像是否固定或随着页面内容滚动而滚动<br>background-attachment</p>
+<pre class="line-numbers language-none"><code class="language-none">body {
+    background-attachment: fixed;
+}
+
+默认滚动，滚动:scroll、固定:fixed
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4、设置背景图片的起始位置<br>background-position</p>
+<pre class="line-numbers language-none"><code class="language-none">body {
+    background-position: 40px,40px;
+}
+
+#设置百分比0%、25%、50%、100%，设置像素X、Y，设置方位：center、top、left、
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>5、设置背景图片是否重复以及如何重复<br>background-repeat</p>
+<pre class="line-numbers language-none"><code class="language-none">body {
+    background-repeat: repeat;
+}
+
+repeat:重复、no-repeat:不重复、repeat-x:x轴重复、:repeat-y:y轴重复
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>6、设置背景图片的大小：background-size</p>
+<pre class="line-numbers language-none"><code class="language-none">body {
+    background-size: 400px,200px;
+}
+
+适应:autu、
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>7、设置图片的定位区域：background-origin</p>
+<pre class="line-numbers language-none"><code class="language-none">body {
+    background-origin:border-box;
+}
+
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>8、设置图片的绘制区域：background-clip</p>
+<pre class="line-numbers language-none"><code class="language-none">body {
+
+    background-clip:content-box;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二、字体样式"><a href="#二、字体样式" class="headerlink" title="二、字体样式"></a>二、字体样式</h3><p>1、字体样式</p>
+<pre class="line-numbers language-none"><code class="language-none">.font {
+	// 字体
+    font-family: "仿宋";
+    // 字号大小
+    font-size: 30px;
+    // 字体粗细
+    font-weight: 100;
+    // 字体样式：无样式:normal、加粗、italic斜体、下划线
+    font-style: italic;
+    // 定义字母大小写 无样式:normal、小体大写:small-caps
+    font-variant: normal
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、字体复合属性写法</p>
+<pre class="line-numbers language-none"><code class="language-none">.font {
+	// font: font-style font-weight font-size font-family
+	font: italic 700 16px "仿宋"
+	
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="三、文本样式"><a href="#三、文本样式" class="headerlink" title="三、文本样式"></a>三、文本样式</h3><pre class="line-numbers language-none"><code class="language-none">.text-1 {
+	// 文本颜色
+	color: darkred;
+	// 对齐方式
+	text-align: center;
+	// 装饰文本
+	text-decoration: underline;
+	// 首行缩进
+	text-indent: 2em;
+	// 文本行间距
+	line-height: 20px;
+	// 字母处理
+	text-transform: capitalize;
+	// 阴影效果：水平距离、垂直距离、清晰度、颜色
+	text-shadow: 20px 20px 1px F00;
+}
+
+对齐方式：center:居中对齐、left:左对齐、right:右对齐、justify:两端对齐。
+装饰文本：none:无、line-through删除线、underline:下划线、overline上划线
+em：相对于当前像素的一个文字大小。
+字母处理：capitalize:首字母大写、lowercase:全部小写、uppercase:全部大写
+阴影效果：10px:距右距离，10px:距下距离、清晰度2px、颜色#00
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="四、列表样式"><a href="#四、列表样式" class="headerlink" title="四、列表样式"></a>四、列表样式</h3><p>1、列表类型：list-style-type</p>
+<pre class="line-numbers language-none"><code class="language-none">li {
+    list-style-type: georgian;
+}
+
+空心圆circle、方块square、数字decima、鬼画符georgian
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、列表项图像：list-style-image</p>
+<pre class="line-numbers language-none"><code class="language-none">li {
+    list-style-image: url("../img/花瓣.png");
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3、列表标志位置：list-style-position</p>
+<pre class="line-numbers language-none"><code class="language-none">li {
+    list-style-position: inside;
+}
+
+li {
+    list-style-position: outside;
+}
+
+将列表横放:display: inline;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="五、表格样式"><a href="#五、表格样式" class="headerlink" title="五、表格样式"></a>五、表格样式</h3><p>1、设置表格外边框 border</p>
+<pre class="line-numbers language-none"><code class="language-none">#ta tr th td  {
+    border: 5px solid blue violets;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、合并边框 border-collapse</p>
+<pre class="line-numbers language-none"><code class="language-none">#ta {
+    border-collapse: collapse;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3、设置表格内边距 padding</p>
+<pre class="line-numbers language-none"><code class="language-none">td {
+	padding: 10px;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4、设置宽和高</p>
+<pre class="line-numbers language-none"><code class="language-none">#ta {
+    width: 400px;
+    height: 400px;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>5、设置对齐方式text-align</p>
+<pre class="line-numbers language-none"><code class="language-none">#ta {
+	text-align: center;
+	vertical-align: middle;
+}
+
+设置水平对齐 text-align: left、right、center
+设置垂直对齐 vertical-align: top、bottom、middle
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>6、设置表格颜色</p>
+<pre class="line-numbers language-none"><code class="language-none">#ta {
+	background-color: aqua
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="六、超链接样式"><a href="#六、超链接样式" class="headerlink" title="六、超链接样式"></a>六、超链接样式</h3><p>1、超链接的状态</p>
+<pre class="line-numbers language-none"><code class="language-none">a:link		普通的、未被访问的链接
+a:visited	用户以访问的链接
+a:hover		鼠标指针位于链接上方
+a:active	链接被点击的时刻
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、超链接的样式</p>
+<pre class="line-numbers language-none"><code class="language-none">// 除去链接中的下划线
+text-decoration
+
+a:link {
+	// 除去链接中的下划线
+	text-decoration: none;
+	// 设置背景颜色
+	background-color: red;
+	// 设置前景色
+	color:#F000
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="七、"><a href="#七、" class="headerlink" title="七、"></a>七、</h3><p>1、鼠标样式 cursor</p>
+<pre class="line-numbers language-none"><code class="language-none">.div {
+	cursor: wait;
+}
+
+cursor属性：
+自动默认选择：auto
+正常选择：default
+移动：move
+忙：wait
+水平调整：w-resize
+垂直调整：s-resize
+连接选择：pointer
+精准定位：crosshair
+连接选择：hand
+帮助选择：help
+文本选择：text
+水平调整：e-resize
+垂直调整：n-resize
+外部连接鼠标样式：url
+沿对角线调整：ne-resize、sw-resize、se-resize、nw-resize
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>2、光标样式 focus</p>
+<pre class="line-numbers language-none"><code class="language-none">input:focus {
+	background-color: yellow;
+	color: red;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>3、滚动条 overflow</p>
+<pre class="line-numbers language-none"><code class="language-none">（1）overflow属性
+自动显示滚动条
+overflow: auto;
+没用滚动条
+overflow: hidden;
+没有水平滚动条
+overflow-x: hidden;
+没有垂直滚动条
+overflow-y: hidden;
+
+.div {
+    overflow-x:hidden;
+    overflow-y: hidden;
+    overflow: hidden;
+    overflow: auto;
+}
+
+（2）设置滚动条颜色
+顶部/底部图标颜色
+scrollbar-arrow-color: black; 
+滚动条颜色
+scrollbar-face-color: black; 
+滚动条阴影颜色
+scrollbar-shadow-color: black;
+滚动条背景颜色
+scrollbar-track-color: black;
+滚动条基本颜色
+scrollbar-base-color: black;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>4、滤镜 filter</p>
+<pre class="line-numbers language-none"><code class="language-none">1、设置透明度 alpha
+filter: alpha(10)
+
+2、设置模糊滤镜 blur(Npx)
+filter: blur(4px);
+
+3、设置亮度 brightness(%)
+filter: brightness(2%);
+
+4、设置对比度 contrast(%)
+filter: contrast(30%);
+
+5、饱和度saturate(%)
+filter: saturate(20%);
+
+6、投影dropShadow(color=颜色, offX=x偏移, offY=y偏移, positive模糊范围)
+filter: dropShadow(2px 10px 0 rgba(255,0,0,0.5));
+
+7、设置水平反转 flipH
+filter: flipH;
+
+8、设置垂直反转 flipV
+filter: flipV;
+
+9、设置外发光 glow(color=颜色,strength=强度)
+filter:  glow(color=red, strength=10)
+
+10、灰度 gray(%)
+filter:gray(0.5);
+
+11、设置波纹效果 wave(add=1, )
+filter:wave(1);
+
+12、色相旋转hue-rotate(deg)
+filter:hue-rotate(125deg);
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h1 id="第三章、盒子模型布局"><a href="#第三章、盒子模型布局" class="headerlink" title="第三章、盒子模型布局"></a>第三章、盒子模型布局</h1><p>1、组成：内容、内边距、边框、轮廓、外边距</p>
+<h3 id="一、内边距-padding"><a href="#一、内边距-padding" class="headerlink" title="一、内边距 padding"></a>一、内边距 padding</h3><pre class="line-numbers language-none"><code class="language-none">// 设置所有边距 padding
+.tdbj {
+	padding: 100px;
+}
+
+.tdbj {
+    // 设置上边距 padding-top
+	padding-top: 100px;
+    // 设置底边距 padding-botton
+	padding-botton: 100px;
+    // 设置左边距 padding-left
+	padding-left: 100px
+    // 设置右边距 padding-right
+	padding-right: 100px
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二、边框样式-border"><a href="#二、边框样式-border" class="headerlink" title="二、边框样式 border"></a>二、边框样式 border</h3><p>1、边框的样式 border-style</p>
+<pre class="line-numbers language-none"><code class="language-none">.div1 {
+	border-style: dotted;
+ }
+
+2、边框的单边样式
+border-top-style: ;
+border-left-style: ;
+border-right-style: ;
+border-bottom-style: ;
+
+none:无样式、double:双线样式、solid:实线样式、dotted虚线样式、inset:3D凹边、outset:3D凸边
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3、边框的粗细 border-width</p>
+<pre class="line-numbers language-none"><code class="language-none">.div1 {
+	border-width: 10px;
+ }
+ 
+单边框粗细
+border-top-width
+border-left-width
+border-right-width
+border-bottom-width
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4、边框颜色 border-color</p>
+<pre class="line-numbers language-none"><code class="language-none">.div1 {
+	border-color: red;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>5、圆角边框 border-radius</p>
+<pre class="line-numbers language-none"><code class="language-none">.div1{
+	border-radius: 10px;
+}
+
+# 设置单边圆角
+.div1{
+	border-radius: 10px 20px 30px 40px;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>6、边框阴影 box-shadow</p>
+<pre class="line-numbers language-none"><code class="language-none">.classid {	
+	// 设置边框阴影：距右距离、距下距离、阴影尺寸、清晰度、颜色、内部颜色
+	box-shadow: 10px 10px 5px 5px #FF00 inset
+}
+
+默认外阴影、inset内阴影
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>7、合并边框 -border-collapse</p>
+<pre class="line-numbers language-none"><code class="language-none">#ta {
+    border-collapse: collapse;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="三、轮廓样式-outline"><a href="#三、轮廓样式-outline" class="headerlink" title="三、轮廓样式 outline"></a>三、轮廓样式 outline</h3><p>1、设置轮廓属性 outline: </p>
+<pre class="line-numbers language-none"><code class="language-none">p {
+	// 1、设置轮廓属性
+	outline: 
+	// 2、设置轮廓的颜色
+	outline-color: red;
+	// 3、设置轮廓的样式
+	outline-style: groove;
+	// 4、设置轮廓的宽度
+	outline-width: 10px;
+}
+
+outline-style属性：无样式:none、dotted:定义点状的轮廓、dashed:定义虚线轮廓、solid:定义实线轮廓、double:定义双线轮廓。
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="四、外边距-margin"><a href="#四、外边距-margin" class="headerlink" title="四、外边距 margin"></a>四、外边距 margin</h3><pre class="line-numbers language-none"><code class="language-none">.div {
+	// 外边距
+	margin: 10px;
+	
+	// 顶部外边距
+    margin-top: 10px;
+	// 底部外边距
+    margin-bottom1```: 10px;
+    // 左边外边距
+    margin-left: 10px;
+    // 右边外边距
+    margin-right: 10px;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>清除内外边距：</p>
+<pre class="line-numbers language-none"><code class="language-none">* {
+	padding: 0;
+	margin: 0;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h1 id="第四章、浮动布局"><a href="#第四章、浮动布局" class="headerlink" title="第四章、浮动布局"></a>第四章、浮动布局</h1><h3 id="一、CSS定位"><a href="#一、CSS定位" class="headerlink" title="一、CSS定位"></a>一、CSS定位</h3><p>1、定位机制：</p>
+<p>绝对定位：position: absolute;</p>
+<p>相对定位：position: relative;</p>
+<p>普通流：元素按照HTML的默认位置顺序决定排布的过程。<br>浮动流：脱离普通流的控制，浮动流的盒子不会保留原先的位置。<br>绝对布局：</p>
+<h3 id="一、普通流-position"><a href="#一、普通流-position" class="headerlink" title="一、普通流 position"></a>一、普通流 position</h3><pre class="line-numbers language-none"><code class="language-none">1、普通流：元素按照HTML的位置顺序决定排布的过程。
+2、属性
+// 设置元素放置的位置上 position
+div {
+	position: static;
+}
+
+（1）、position的值：
+静态:static、相对:relative、绝对:absolute、固定:fixed
+
+（2）、相对位置可以设置偏移量：
+// 元素向上的偏移量：top
+// 元素下的偏移量：bottom
+// 元素向左的偏移量：left
+// 元素向右的偏移量：right
+
+（3）、设置元素溢出区域发生的事：overflow
+
+（4）设置元素显示的形状：clip
+
+（5）设置元素垂直对齐的方式：vertical-align
+
+（6）设置元素的堆叠顺序：z-index
+
+div {
+	position: static;
+	z-index: 1;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="二、浮动流-float"><a href="#二、浮动流-float" class="headerlink" title="二、浮动流 float"></a>二、浮动流 float</h3><pre class="line-numbers language-none"><code class="language-none">1）float的值：
+// 元素不浮动
+none
+// 元素向左浮动
+left
+// 元素向右浮动
+right
+// 从父级继承浮动属性
+inherit
+
+div{
+	float: none;
+}
+
+
+2）clear属性
+去掉浮动属性
+div{
+	clear: both;
+}
+
+clear属性值:
+both去掉左右两侧浮动、laft去掉向左浮动、right去掉向右浮动、inherit去掉父级继承浮动
+
+3）设置元素的堆叠顺序：z-index
+
+div {
+	z-index: 1;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">浮动样式应用
+HTML结构
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;瀑布流布局&lt;/title&gt;
+    &lt;link href="浮动应用样式.css" type="text/css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;img src="../img/花瓣.png"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="../img/花瓣.png"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="../img/花瓣.png"&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;img src="../img/花瓣.png"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="../img/花瓣.png"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="../img/花瓣.png"&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;img src="../img/花瓣.png"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="../img/花瓣.png"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="../img/花瓣.png"&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+CSS样式
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+#div1 {
+    width: 1000px;
+    height: auto;
+    margin: 20px auto;
+}
+
+ul{ 
+    width: 250px;
+    float: left;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h1 id="第五章、CSS常见操作"><a href="#第五章、CSS常见操作" class="headerlink" title="第五章、CSS常见操作"></a>第五章、CSS常见操作</h1><h3 id="一、对齐操作"><a href="#一、对齐操作" class="headerlink" title="一、对齐操作"></a>一、对齐操作</h3><p>1、使用margin属性进行水平对齐</p>
+<pre class="line-numbers language-none"><code class="language-none">.div {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、使用position属性进行左右对齐</p>
+<pre class="line-numbers language-none"><code class="language-none">.div {
+	position: absolute;
+	// 向左对齐
+	left: 0px;
+	// 向右对齐
+	right: 0px;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3、使用float属性进行左右对齐</p>
+<pre class="line-numbers language-none"><code class="language-none">div{
+	float: left;
+	float: right;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二、分类"><a href="#二、分类" class="headerlink" title="二、分类"></a>二、分类</h3><p>1、尺寸</p>
+<p>设置元素高度</p>
+<pre class="line-numbers language-none"><code class="language-none">.p{
+    // 设置元素高度
+    height: 10px;
+    // 设置元素宽度
+    widht: 10px;
+    // 设置行高
+    lie-height: 10px;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、分类</p>
+<p>设置鼠标样式 cursor</p>
+<pre class="line-numbers language-none"><code class="language-none">.p{
+	cursor: alias;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>设置元素是否可见 visibility</p>
+<pre class="line-numbers language-none"><code class="language-none">li {
+	 visibility:  visible;
+}
+visible:可见、hidden不可见
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="三、导航栏"><a href="#三、导航栏" class="headerlink" title="三、导航栏"></a>三、导航栏</h3><p>1、垂直导航栏</p>
+<pre class="line-numbers language-none"><code class="language-none">HTML结构
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;导航栏&lt;/title&gt;
+    &lt;link href="导航栏样式.css" type="text/css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="https://www.baidu.com/"&gt;百度&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.sogou.com/"&gt;搜狗&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.bilibili.com/"&gt;bilibili&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.zhihu.com/"&gt;知乎&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+CSS样式
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a:link,a:visited{
+    text-decoration: none;
+    display: block;
+    background-color: aqua;
+    width: 50px;
+    text-align: center;
+}
+
+a:active,a:hover{
+    background-color: bisque;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2、水平导航栏</p>
+<pre class="line-numbers language-none"><code class="language-none">HTML结构
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;导航栏&lt;/title&gt;
+    &lt;link href="导航栏样式.css" type="text/css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="https://www.baidu.com/"&gt;百度&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.sogou.com/"&gt;搜狗&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.bilibili.com/"&gt;bilibili&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.zhihu.com/"&gt;知乎&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+CSS样式
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: darkgray;
+    width: 250px;
+    text-align: center;
+}
+
+a:link,a:visited{
+    font-weight: initial;
+    text-decoration: none;
+    background-color: aqua;
+    width: 50px;
+    text-align: center;
+}
+
+a:active,a:hover{
+    background-color: bisque;
+}
+
+li {
+    display: inline;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
+<h3 id="四、图片样式"><a href="#四、图片样式" class="headerlink" title="四、图片样式"></a>四、图片样式</h3><pre class="line-numbers language-none"><code class="language-none">HTML结构
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;图片样式&lt;/title&gt;
+    &lt;link href="图片样式1.css" type="text/css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;div class="image"&gt;
+            &lt;a href="#" target="_self"&gt;
+                &lt;img src="../img/时崎狂三.jpg" alt="风景" width="400px" height="200"&gt;
+            &lt;/a&gt;
+            &lt;div class="text"&gt;时崎狂三&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="image"&gt;
+            &lt;a href="#" target="_self"&gt;
+                &lt;img src="../img/时崎狂三.jpg" alt="风景" width="400px" height="200"&gt;
+            &lt;/a&gt;
+            &lt;div class="text"&gt;时崎狂三&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="image"&gt;
+            &lt;a href="#" target="_self"&gt;
+                &lt;img src="../img/时崎狂三.jpg" alt="风景" width="400px" height="200"&gt;
+            &lt;/a&gt;
+            &lt;div class="text"&gt;时崎狂三&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="image"&gt;
+            &lt;a href="#" target="_self"&gt;
+                &lt;img src="../img/时崎狂三.jpg" alt="风景" width="400px" height="200"&gt;
+            &lt;/a&gt;
+            &lt;div class="text"&gt;时崎狂三&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+CSS样式
+body {
+    margin: 10px auto;
+    width: 70%;
+    height: auto;
+}
+
+.image {
+    border: 1px solid darkgray;
+    width: auto;
+    height: auto;
+    float: left;
+    text-align: center;
+    margin: 5px;
+}
+
+img {
+    margin: 5px;
+}
+
+.text {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h1 id="第六章、CSS动画"><a href="#第六章、CSS动画" class="headerlink" title="第六章、CSS动画"></a>第六章、CSS动画</h1><h3 id="一、3D与2D的转换"><a href="#一、3D与2D的转换" class="headerlink" title="一、3D与2D的转换"></a>一、3D与2D的转换</h3><p>实现一些效果，例如移动、旋转、缩放、倾斜、拉伸</p>
+<p>1、2D转换的方法：</p>
+<pre class="line-numbers language-none"><code class="language-none">translate()	移动
+rotate()	旋转
+scale()		缩放
+skew()		倾斜
+matrix()	拉伸
+
+
+/* 移动 */
+.div1 {
+    transform: translate(200px,100px);
+    /* 指定浏览器 */
+    -ms-transform: translate(100px,100px); /*IE*/
+}
+
+/* 旋转 */
+.div1 {
+    transform: rotate(200deg);
+    /* 指定浏览器 */
+    -ms-transform: translate(100px,100px); /*IE*/
+}
+
+/* 缩放 */
+.div1 {
+    transform: scale(1,2);
+    /* 指定浏览器 */
+    -ms-transform: translate(100px,100px); /*IE*/
+}
+
+/* 倾斜 */
+.div1 {
+    transform: skew(30deg, 20deg);
+    /* 指定浏览器 */
+    -ms-transform: translate(100px,100px); /*IE*/
+}
+
+/*  */
+.div1 {
+    transform: matrix(1,2,3,4,5,6);
+    /* 指定浏览器 */
+    -ms-transform: translate(100px,100px); /*IE*/
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<p>2、3D转换的方法：</p>
+<pre class="line-numbers language-none"><code class="language-none">rotateX()
+rotateY()
+
+/*  */
+.div1 {
+    transform: rotateX(500deg);
+    /* 指定浏览器 */
+    -ms-transform: translate(100deg); /*IE*/
+}
+
+/*  */
+.div1 {
+    transform: rotateY(500deg);
+    /* 指定浏览器 */
+    -ms-transform: translate(100deg); /*IE*/
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二、过度"><a href="#二、过度" class="headerlink" title="二、过度"></a>二、过度</h3><p>是元素从一种样式转换成另一种样式。</p>
+<pre class="line-numbers language-none"><code class="language-none">// 设置过度
+transition
+// 过度名称 
+transition-property
+// 过度效果的时间
+transition-duration
+// 过度效果的时间曲线
+transition-timing-functio
+// 过度效果的延时时间
+transition-delay
+
+// 实战-
+div {
+    width: 100px;
+    height: 100px;
+    background-color: darkturquoise;
+    -webkit-transition: width 2s, height 2s, -ms-transform 2s;
+    transition: width 2s, height 2s, transform 2s;
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+}
+div:hover {
+    width: 200px;
+    height: 200px;
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg)
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="三、动画"><a href="#三、动画" class="headerlink" title="三、动画"></a>三、动画</h3><p>遵循@keyframes规则：规定动画时长、规定动画名称</p>
+<pre class="line-numbers language-none"><code class="language-none"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h3 id="四、多列"><a href="#四、多列" class="headerlink" title="四、多列"></a>四、多列</h3><p>对文本或区域进行布局</p>
+<pre class="line-numbers language-none"><code class="language-none">column-count	分列的数量
+column-gap		列间距
+column-rule		间距线
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;多列&lt;/title&gt;
+    &lt;link rel="stylesheet" href="多列样式.css" type="text/css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="div1"&gt;
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+        哈啊哈哈哈哈哈哈哈
+    &lt;/div&gt;    
+&lt;/body&gt;
+&lt;/html&gt;
+
+.div1 {
+    column-count: 4;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 30px;
+    column-gap: 30px;
+    column-rule: 5px outset red;
+    -webkit-column-rule: 5px outset red;
+}
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
                 
             </div>
             <hr/>
@@ -727,7 +1910,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
+                            
+                                <a href="/tags/CSS/">
+                                    <span class="chip bg-color">CSS</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1213,7 +2404,7 @@ new Valine({
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            HTML5是构建Web内容的一种语言描述方式。
                         
                     </div>
                     <div class="publish-info">
@@ -1222,11 +2413,27 @@ new Valine({
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            书生
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                    博客篇
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/HTML5/">
+                        <span class="chip bg-color">HTML5</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1512,7 +2719,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.3k</span>&nbsp;字
+                class="white-color">46.3k</span>&nbsp;字
             
             
             
